@@ -4,18 +4,14 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 0.beta3.1
+Release:        %mkrel 0.beta3.2
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
 License:        GPLv2+
 URL:            https://core.fluendo.com/gstreamer/trac/browser/codeina
 # Upstream SVN repository is at https://core.fluendo.com/gstreamer/svn/codeina/trunk/
-Source0:         http://www.fluendo.com/downloads/codeina/%{name}-%{version}~beta3.tar.bz2
-# (fc) 0.10.2-0.beta3.1mdv use gurpmi for package install
-Patch0:		codeina-0.10.2-gurpmi.patch
-# (fc) 0.12.2-0.beta3.1mdv allow transient option
-Patch1:		codeina-0.10.2-transient.patch
+Source0:         http://www.fluendo.com/downloads/codeina/%{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -26,6 +22,7 @@ Requires:       gnome-python-gtkmozembed
 Requires:       python-OpenSSL
 Requires:       python-notify
 Requires:       python-twisted-web
+Requires:	lsb-release
 
 BuildRequires:  python-OpenSSL
 BuildRequires:  python-twisted-web
@@ -50,9 +47,7 @@ Codeina installs codecs from the Fluendo webshop or distribution package
 for GStreamer.
 
 %prep
-%setup -q -n %{name}-%{version}~beta3
-%patch0 -p1 -b .gurpmi
-%patch1 -p1 -b .transient
+%setup -q -n %{name}-%{version}
 
 %build
 %configure2_5x
@@ -66,9 +61,14 @@ rm -rf $RPM_BUILD_ROOT
 
 # only ship mandriva file for this distribution
 rm -f $RPM_BUILD_ROOT%{_sysconfdir}/codeina/providers/{fedora*,ubuntu*}.xml
-sed -e 's/2008\.0/2008.1/g' $RPM_BUILD_ROOT%{_sysconfdir}/codeina/providers/mandrivalinux_2008.0.xml > $RPM_BUILD_ROOT%{_sysconfdir}/codeina/providers/mandrivalinux_2008.1.xml 
+%if %mdkversion >= 200800
 rm -f $RPM_BUILD_ROOT%{_sysconfdir}/codeina/providers/mandrivalinux_2008.0.xml
+%endif
 rm -f $RPM_BUILD_ROOT%{_datadir}/codeina/logo/ubuntu.png
+
+rm -rf $RPM_BUILD_ROOT%{_sysconfdir}/xdg/menus
+
+sed -i -e 's/Comment=.*$/Comment=Codec Installer/g' $RPM_BUILD_ROOT%{_datadir}/applications/codeina-shop.desktop
 
 
 %find_lang %{name} 
@@ -80,8 +80,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc ChangeLog COPYING README AUTHORS
 %config (noreplace) %{_sysconfdir}/codeina
+%config (noreplace) %{_sysconfdir}/xdg/autostart/codeina.desktop
 %{_bindir}/%{name}
 %{_bindir}/%{name}.bin
 %{python_sitelib}/codeina
 %{_datadir}/codeina
-
+%{_datadir}/applications/*.desktop
+%{_datadir}/autostart/*.desktop
