@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 0.beta4.2
+Release:        %mkrel 0.beta4.3
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -18,6 +18,8 @@ URL:            https://core.fluendo.com/gstreamer/trac/browser/codeina
 # Upstream SVN repository is at https://core.fluendo.com/gstreamer/svn/codeina/trunk/
 Source0:         http://www.fluendo.com/downloads/codeina/%{name}-%{version}~beta4.tar.bz2
 Source1: http://plf.zarb.org/logo3.png
+# (fc) 0.10.2-beta4.2 fix codeina for lib64
+Patch0:		codeina-0.10.2-lib64.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -59,6 +61,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 
 %prep
 %setup -q -n %{name}-%{version}~beta4
+%patch0 -p1 -b .lib64
 
 %build
 
