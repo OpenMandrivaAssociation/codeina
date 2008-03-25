@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 2
+Release:        %mkrel 3
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -28,6 +28,8 @@ Patch1:		codeina-0.10.2-improvelayout.patch
 Patch2:		codeina-0.10.2-nonetworknoupdate.patch
 # (fc) 0.10.2-2mdv improve Gecko detection (Mdv bug #39239)
 Patch3:		codeina-0.10.2-improvegeckodetection.patch
+# (fc) 0.10.2-2mdv don't open a popup when no codec is found (Mdv bug #39237)
+Patch4:		codeina-0.10.2-nopopup.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -73,6 +75,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 %patch1 -p1 -b .improvelayout
 %patch2 -p1 -b .nonetworknoupdate
 %patch3 -p1 -b .improvegeckodetection
+%patch4 -p1 -b .nopopup
 
 %build
 
