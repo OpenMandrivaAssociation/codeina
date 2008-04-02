@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 5
+Release:        %mkrel 6
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -32,6 +32,8 @@ Patch3:		codeina-0.10.2-improvegeckodetection.patch
 Patch4:		codeina-0.10.2-nopopup.patch
 # (fc) 0.10.2-5mdv SVN fixes (change default size for browser windows, add distribution version to url)
 Patch5:		codeina-0.10.2-svnfixes.patch
+# (fc) 0.10.2-6mdv handle more http return value (SVN)
+Patch6:		codeina-0.10.2-httpcode.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -79,6 +81,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 %patch3 -p1 -b .improvegeckodetection
 %patch4 -p1 -b .nopopup
 %patch5 -p1 -b .svnfixes
+%patch6 -p1 -b .httpcode
 
 %build
 
