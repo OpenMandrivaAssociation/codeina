@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 8
+Release:        %mkrel 9
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -36,6 +36,8 @@ Patch5:		codeina-0.10.2-svnfixes.patch
 Patch6:		codeina-0.10.2-httpcode.patch
 # (fc) 0.10.2-8mdv handle multiple codec request in one transaction (SVN)
 Patch7:		codeina-0.10.2-multiplecodec.patch
+# (fc) 0.10.2-9mdv only notify updates for Fluendo media (Mdv bug #39746) (SVN)
+Patch8:		codeina-0.10.2-notifyonlyfluendo.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -86,6 +88,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 %patch5 -p1 -b .svnfixes
 %patch6 -p1 -b .httpcode
 %patch7 -p1 -b .multiplecodec
+%patch8 -p1 -b .notifyonlyfluendo
 
 %build
 
