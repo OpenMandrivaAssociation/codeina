@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 10
+Release:        %mkrel 11
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -93,8 +93,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 %patch8 -p1 -b .notifyonlyfluendo
 cp providers/mandrivalinux_2008.1.tmpl providers/mandrivalinux_2009.0.tmpl
 cp providers/plf_2008.1.tmpl providers/plf_2009.0.tmpl
-cp providers/plf_2008.1.yaml providers/plf_2009.0.yaml
-%patch9 -p0 -b .2009.0
+%patch9 -p1 -b .2009.0
 
 %build
 
