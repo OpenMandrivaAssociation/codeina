@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 12
+Release:        %mkrel 13
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -27,6 +27,7 @@ Patch1:		codeina-0.10.2-improvelayout.patch
 # (fc) 0.10.2-1mdv don't complain about missing network when checking update at session startup
 Patch2:		codeina-0.10.2-nonetworknoupdate.patch
 # (fc) 0.10.2-2mdv improve Gecko detection (Mdv bug #39239)
+# gw 0.10.2-13mdv: use xulrunner
 Patch3:		codeina-0.10.2-improvegeckodetection.patch
 # (fc) 0.10.2-2mdv don't open a popup when no codec is found (Mdv bug #39237)
 Patch4:		codeina-0.10.2-nopopup.patch
