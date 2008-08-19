@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 13
+Release:        %mkrel 14
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -52,6 +52,7 @@ Requires:       python-OpenSSL
 Requires:       python-notify
 Requires:       python-twisted-web
 Requires:	lsb-release
+Requires:	gurpmi
 Suggests:	libstdc++5
 
 BuildRequires:  python-OpenSSL
