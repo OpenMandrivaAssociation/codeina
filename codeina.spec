@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 15
+Release:        %mkrel 16
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -40,7 +40,7 @@ Patch7:		codeina-0.10.2-multiplecodec.patch
 # (fc) 0.10.2-9mdv only notify updates for Fluendo media (Mdv bug #39746) (SVN)
 Patch8:		codeina-0.10.2-notifyonlyfluendo.patch
 #gw update for 2009.0 distribution version
-Patch9: codeina-0.10.2-2009.0.patch
+Patch9: codeina-0.10.2-mandriva.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -95,7 +95,9 @@ This package is in PLF as it contains a list of packages that violate patents.
 %patch8 -p1 -b .notifyonlyfluendo
 cp providers/mandrivalinux_2008.1.tmpl providers/mandrivalinux_2009.0.tmpl
 cp providers/plf_2008.1.tmpl providers/plf_2009.0.tmpl
-%patch9 -p1 -b .2009.0
+cp providers/mandrivalinux_2008.1.tmpl providers/mandrivalinux_2009.1.tmpl
+cp providers/plf_2008.1.tmpl providers/plf_2009.1.tmpl
+%patch9 -p1 -b .mandriva
 
 %build
 
