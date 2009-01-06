@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 17
+Release:        %mkrel 18
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -41,6 +41,7 @@ Patch7:		codeina-0.10.2-multiplecodec.patch
 Patch8:		codeina-0.10.2-notifyonlyfluendo.patch
 #gw update for 2009.0 distribution version
 Patch9: codeina-0.10.2-mandriva.patch
+Patch10: codeina-0.10.2-python-version.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -98,6 +99,7 @@ cp providers/plf_2008.1.tmpl providers/plf_2009.0.tmpl
 cp providers/mandrivalinux_2008.1.tmpl providers/mandrivalinux_2009.1.tmpl
 cp providers/plf_2008.1.tmpl providers/plf_2009.1.tmpl
 %patch9 -p1 -b .mandriva
+%patch10 -p1
 
 %build
 
