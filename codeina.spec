@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 19
+Release:        %mkrel 20
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -126,6 +126,8 @@ install -m 644 %SOURCE1 %buildroot%_datadir/codeina/logo/plf.png
 
 # no longer needed 
 rm -f %buildroot%{_sysconfdir}/codeina/codeina_legal.html
+# remove autostart in /usr/share, use those in /etc/xdg
+rm -rf %buildroot%{_datadir}/autostart
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -147,4 +149,3 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/codeina
 %{_datadir}/codeina
 %{_datadir}/applications/*.desktop
-%{_datadir}/autostart/*.desktop
