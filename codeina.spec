@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.2
-Release:        %mkrel 21
+Release:        %mkrel 22
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
