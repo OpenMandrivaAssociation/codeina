@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.5
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -18,8 +18,6 @@ URL:            https://core.fluendo.com/gstreamer/trac/browser/codeina
 # Upstream SVN repository is at https://core.fluendo.com/gstreamer/svn/codeina/trunk/
 Source0:        http://core.fluendo.com/gstreamer/src/codeina/%{name}-%{version}.tar.bz2
 Source1: http://plf.zarb.org/logo3.png
-# (fc) 0.10.2-2mdv additional translations (forwarded upstream)
-Source2:	codeina-0.10.2-po.tar.bz2
 # (fc) 0.10.2-1mdv delay codeina startup at session start
 Patch0:		codeina-0.10.2-delaystartup.patch
 # (fc) fix python version used for codeina
@@ -71,7 +69,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 
 
 %prep
-%setup -q -b 2
+%setup -q 
 %patch0 -p1 -b .delaystartup
 %patch10 -p1 -b .version
 %patch9 -p1 -b .mandriva
