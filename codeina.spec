@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.5
-Release:        %mkrel 2
+Release:        %mkrel 3
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -27,6 +27,7 @@ Patch10: codeina-0.10.2-python-version.patch
 Patch9: codeina-0.10.2-mandriva.patch
 # same patch as mandriva patch, for plf packages
 Patch11: codeina-0.10.2-plf.patch
+Patch12: codeina-0.10.5-pt_BR-fixes.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -74,6 +75,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 %patch10 -p1 -b .version
 %patch9 -p1 -b .mandriva
 %patch11 -p1 -b .plf
+%patch12 -p1 -b .pt_BR_fixes
 
 #needed by patch11
 aclocal -I common/m4
