@@ -8,7 +8,7 @@
 %endif
 
 Name:           codeina
-Version:        0.10.5.1
+Version:        0.10.6
 Release:        %mkrel 1
 Summary:        Codeina - Codec Installation Application
 
@@ -28,10 +28,6 @@ Patch9: codeina-0.10.2-mandriva.patch
 # same patch as mandriva patch, for plf packages
 Patch11: codeina-0.10.2-plf.patch
 Patch12: codeina-0.10.5-pt_BR-fixes.patch
-#gw make it work on x86_64 which does not have the dl module
-# https://core.fluendo.com/gstreamer/trac/ticket/218
-#https://qa.mandriva.com/show_bug.cgi?id=52876
-Patch13: codeina-r1697-dont-use-dl.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
@@ -80,7 +76,6 @@ This package is in PLF as it contains a list of packages that violate patents.
 %patch9 -p1 -b .mandriva
 %patch11 -p1 -b .plf
 %patch12 -p1 -b .pt_BR_fixes
-%patch13 -p3
 
 #needed by patch11
 aclocal -I common/m4
