@@ -27,9 +27,9 @@ Patch1: codeina-0.10.6-xulrunner.patch
 Patch10: codeina-0.10.2-python-version.patch
 #gw update for new distribution releases
 # to regenerate this patch, run scripts/gst-scanpackages directory where directory contains packages containing all available gstreamer plugins, for all supported arch
-Patch9: codeina-0.10.2-mandriva.patch
+Patch9: codeina-0.10.6-mandriva.patch
 # same patch as mandriva patch, for plf packages
-Patch11: codeina-0.10.2-plf.patch
+Patch11: codeina-0.10.6-plf.patch
 Patch12: codeina-0.10.5-pt_BR-fixes.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
