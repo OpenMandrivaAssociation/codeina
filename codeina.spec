@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.6
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -20,6 +20,9 @@ Source0:        http://core.fluendo.com/gstreamer/src/codeina/%{name}-%{version}
 Source1: http://plf.zarb.org/logo3.png
 # (fc) 0.10.2-1mdv delay codeina startup at session start
 Patch0:		codeina-0.10.2-delaystartup.patch
+#gw fix crash on startup trying to load xulrunner
+#https://qa.mandriva.com/show_bug.cgi?id=53213
+Patch1: codeina-0.10.6-xulrunner.patch
 # (fc) fix python version used for codeina
 Patch10: codeina-0.10.2-python-version.patch
 #gw update for new distribution releases
@@ -72,6 +75,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 %prep
 %setup -q 
 %patch0 -p1 -b .delaystartup
+%patch1 -p1
 %patch10 -p1 -b .version
 %patch9 -p1 -b .mandriva
 %patch11 -p1 -b .plf
