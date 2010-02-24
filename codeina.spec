@@ -61,6 +61,7 @@ BuildRequires:  gnome-python-gtkmozembed
 BuildRequires:  python-notify
 BuildRequires:  python-pyxml
 BuildRequires:  pyxdg
+BuildRequires:  xulrunner-devel
 
 # sigh, libtool
 BuildRequires:  gcc-c++
@@ -106,6 +107,7 @@ export PROVIDER_FILES="mandrivalinux_%mandriva_release.xml fluendo.xml"
 %if %build_plf
 export PROVIDER_FILES="$PROVIDER_FILES plf_%mandriva_release.xml"
 %endif
+export LD_LIBRARY_PATH=%xulrunner_mozappdir
 %configure2_5x
 
 make
