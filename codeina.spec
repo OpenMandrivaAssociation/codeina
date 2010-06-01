@@ -134,7 +134,7 @@ rm -rf %buildroot%{_datadir}/autostart
 rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
-%defattr(-,root,root,-)
+%defattr(644,root,root,-)
 %doc ChangeLog COPYING README AUTHORS
 %dir %{_sysconfdir}/codeina
 %dir %{_sysconfdir}/codeina/providers
