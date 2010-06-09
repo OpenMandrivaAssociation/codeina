@@ -134,8 +134,7 @@ rm -rf %buildroot%{_datadir}/autostart
 rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
-%defattr(644,root,root,-)
-%doc ChangeLog COPYING README AUTHORS
+%defattr(-,root,root,-)
 %dir %{_sysconfdir}/codeina
 %dir %{_sysconfdir}/codeina/providers
 %config (noreplace) %{_sysconfdir}/codeina/providers/fluendo.xml
@@ -150,3 +149,5 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/codeina
 %{_datadir}/codeina
 %{_datadir}/applications/*.desktop
+%defattr(644,root,root,755)
+%doc ChangeLog COPYING README AUTHORS
