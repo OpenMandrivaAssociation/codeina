@@ -8,8 +8,8 @@
 %endif
 
 Name:           codeina
-Version:        0.10.6
-Release:        %mkrel 6
+Version:        0.10.7
+Release:        %mkrel 0.1
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -20,24 +20,12 @@ Source0:        http://core.fluendo.com/gstreamer/src/codeina/%{name}-%{version}
 Source1: http://plf.zarb.org/logo3.png
 # (fc) 0.10.2-1mdv delay codeina startup at session start
 Patch0:		codeina-0.10.2-delaystartup.patch
-#gw fix crash on startup trying to load xulrunner
-#https://qa.mandriva.com/show_bug.cgi?id=53213
-Patch1: codeina-0.10.6-xulrunner.patch
-# (fc) fix python version used for codeina
-Patch10: codeina-0.10.2-python-version.patch
 #gw update for new distribution releases
 # to regenerate this patch, run scripts/gst-scanpackages directory where directory contains packages containing all available gstreamer plugins, for all supported arch
-Patch9: codeina-0.10.6-mandriva.patch
+# make sure to remove gstreamer0.10-python* package for scanned directory (GNOME bug #590806)
+Patch9: codeina-0.10.7-mandriva.patch
 # same patch as mandriva patch, for plf packages
 Patch11: codeina-0.10.6-plf.patch
-Patch12: codeina-0.10.5-pt_BR-fixes.patch
-# various bug fixes (fcrozat)
-Patch13: 0001-remove-deprecated-python-calls-sets.patch
-Patch14: 0002-sha-is-deprecated-use-hashlib-instead.patch
-Patch15: 0003-fix-infinite-loop.patch
-Patch16: 0004-fix-deprecation-ensure-urpmi-installer-is-working.patch
-Patch17: 0005-rewrite-lsb_release-parsing-code-to-not-call-lsb_rel.patch
-Patch18: 0006-strip-package-name.patch
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -84,19 +72,10 @@ This package is in PLF as it contains a list of packages that violate patents.
 %prep
 %setup -q 
 %patch0 -p1 -b .delaystartup
-%patch1 -p1
-%patch10 -p1 -b .version
 %patch9 -p1 -b .mandriva
 %patch11 -p1 -b .plf
-%patch12 -p1 -b .pt_BR_fixes
-%patch13 -p1
-%patch14 -p1
-%patch15 -p1
-%patch16 -p1
-%patch17 -p1
-%patch18 -p1
 
-#needed by patch11
+#needed by patches 9 & 11
 aclocal -I common/m4
 autoconf
 automake
