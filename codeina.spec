@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.7
-Release:        %mkrel 3
+Release:        %mkrel 4
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -25,7 +25,7 @@ Patch0:		codeina-0.10.2-delaystartup.patch
 # make sure to remove gstreamer0.10-python* package for scanned directory (GNOME bug #590806)
 Patch9: codeina-0.10.7-mandriva.patch
 # same patch as mandriva patch, for plf packages
-Patch11: codeina-0.10.6-plf.patch
+Patch11: codeina-0.10.7-plf.patch
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
