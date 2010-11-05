@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.7
-Release:        %mkrel 4
+Release:        %mkrel 5
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -20,6 +20,8 @@ Source0:        http://core.fluendo.com/gstreamer/src/codeina/%{name}-%{version}
 Source1: http://plf.zarb.org/logo3.png
 # (fc) 0.10.2-1mdv delay codeina startup at session start
 Patch0:		codeina-0.10.2-delaystartup.patch
+# fwang: force basename on main binary
+Patch1:		codeina-0.10.7-realbasename.patch
 #gw update for new distribution releases
 # to regenerate this patch, run scripts/gst-scanpackages directory where directory contains packages containing all available gstreamer plugins, for all supported arch
 # make sure to remove gstreamer0.10-python* package for scanned directory (GNOME bug #590806)
@@ -40,7 +42,9 @@ Requires:       python-twisted-web
 Requires:	lsb-release
 Requires:	gurpmi
 Suggests:	libstdc++5
-
+Provides:	gst-install-plugins-helper
+Requires(post):	update-alternatives
+Requires(postun): update-alternatives
 BuildRequires:  python-OpenSSL
 BuildRequires:  python-twisted-web
 BuildRequires:  gstreamer0.10-python >= %{gstpy_minver}
@@ -72,6 +76,7 @@ This package is in PLF as it contains a list of packages that violate patents.
 %prep
 %setup -q 
 %patch0 -p1 -b .delaystartup
+%patch1 -p0 -b .orig
 %patch9 -p1 -b .mandriva
 %patch11 -p1 -b .plf
 
@@ -108,6 +113,16 @@ install -m 644 %SOURCE1 %buildroot%_datadir/codeina/logo/plf.png
 rm -f %buildroot%{_sysconfdir}/codeina/codeina_legal.html
 # remove autostart in /usr/share, use those in /etc/xdg
 rm -rf %buildroot%{_datadir}/autostart
+
+%post
+update-alternatives --install %{_libexecdir}/gst-install-plugins-helper gst-install-plugins-helper %{_bindir}/codeina 5
+
+%postun
+if [ "$1" = "0" ]; then
+    if ! [ -e %{_bindir}/codeina ]; then
+        update-alternatives --remove gst-install-plugins-helper %{_bindir}/codeina
+    fi
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
