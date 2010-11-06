@@ -9,7 +9,7 @@
 
 Name:           codeina
 Version:        0.10.7
-Release:        %mkrel 5
+Release:        %mkrel 6
 Summary:        Codeina - Codec Installation Application
 
 Group:          Sound
@@ -61,8 +61,7 @@ BuildRequires:  gcc-c++
 BuildRequires:  intltool
 BuildRequires:  gettext
 BuildRequires:  desktop-file-utils
-
-BuildArch:      noarch
+Obsoletes: %name < %version-%release
 
 %description
 Codeina installs codecs from the Fluendo webshop or distribution package
