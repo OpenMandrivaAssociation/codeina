@@ -96,11 +96,11 @@ export LD_LIBRARY_PATH=%xulrunner_mozappdir
 make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %makeinstall_std
 
-rm -f $RPM_BUILD_ROOT%{_datadir}/codeina/logo/ubuntu.png
+rm -f %{buildroot}%{_datadir}/codeina/logo/ubuntu.png
 
 %find_lang %{name} 
 
@@ -124,7 +124,7 @@ if [ "$1" = "0" ]; then
 fi
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
