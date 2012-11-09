@@ -1,0 +1,39 @@
+From 391eb413ed10bd6457260738c1b57aef1ee9d8eb Mon Sep 17 00:00:00 2001
+From: Frederic Crozat <fcrozat@mandriva.com>
+Date: Fri, 5 Jun 2009 13:20:31 +0200
+Subject: [PATCH] delay codeina startup at session start
+
+---
+ data/codeina-update-kde.desktop |    2 +-
+ data/codeina-update.desktop     |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/data/codeina-update-kde.desktop b/data/codeina-update-kde.desktop
+index b100719..8cdd2ac 100644
+--- a/data/codeina-update-kde.desktop
++++ b/data/codeina-update-kde.desktop
+@@ -3,7 +3,7 @@ Encoding=UTF-8
+ Name=Codeina
+ Comment=Codeina update notifier
+ Icon=codeina
+-Exec=codeina -u --sleep 5
++Exec=codeina -u --sleep 30
+ Terminal=false
+ Type=Application
+ Categories=
+diff --git a/data/codeina-update.desktop b/data/codeina-update.desktop
+index 088fcee..7a3d4e1 100644
+--- a/data/codeina-update.desktop
++++ b/data/codeina-update.desktop
+@@ -3,7 +3,7 @@ Encoding=UTF-8
+ Name=Codeina
+ Comment=Codeina update notifier
+ Icon=codeina
+-Exec=codeina -u --sleep 5
++Exec=codeina -u --sleep 30
+ Terminal=false
+ Type=Application
+ Categories=
+-- 
+1.6.2.4
+

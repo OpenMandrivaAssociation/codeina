@@ -1,0 +1,4460 @@
+commit e12d281ff3e3a94e0015717959e4926025fd1fd6
+Author: Götz Waschk <waschk@mandriva.org>
+Date:   Thu Nov 4 10:39:25 2010 +0100
+
+    add PLF data up to 2011.0
+
+diff --git a/providers/plf_2009.0.tmpl b/providers/plf_2009.0.tmpl
+new file mode 100644
+index 0000000..eda1676
+--- /dev/null
++++ b/providers/plf_2009.0.tmpl
+@@ -0,0 +1,5 @@
++# this file contains products data that should be included in the plugin list,
++# but are not available inside the plugin
++id: plf 
++flavor-distro: mandrivalinux
++flavor-distro-version: 2009.0
+diff --git a/providers/plf_2009.0.yaml b/providers/plf_2009.0.yaml
+new file mode 100644
+index 0000000..6d52b9f
+--- /dev/null
++++ b/providers/plf_2009.0.yaml
+@@ -0,0 +1,662 @@
++# WARNING: this file is generated. Do *NOT* edit!
++products:
++  -
++    name: gstreamer0.10-directfb
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dfbvideosink"
++        version: "0.10.8"
++        description: "DirectFB video output plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-nas
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "nas"
++        version: "0.10.8"
++        description: "NAS (Network Audio System) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-sid
++    version: 0.10.9
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "siddec"
++        version: "0.10.9"
++        description: "Uses libsidplay to decode .sid files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-siddec; decoder-audio/x-sid; ']
++
++  -
++    name: gstreamer0.10-metadata
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "metadata"
++        version: "0.10.8"
++        description: "Metadata (EXIF, IPTC and XMP) image (JPEG, TIFF) demuxer and muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xvid
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xvid"
++        version: "0.10.8"
++        description: "XviD plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-xviddec; decoder-video/x-xvid, width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ']
++
++  -
++    name: gstreamer0.10-lame
++    version: 0.10.9
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "lame"
++        version: "0.10.9"
++        description: "Encode MP3s with LAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xing
++    version: 0.10.2
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xingenc"
++        version: "0.10.2"
++        description: "Xing MP3 Encoder"
++        origin: "http://banshee-project.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg
++    version: 0.10.9
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2dec"
++        version: "0.10.9"
++        description: "LibMpeg2 decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpeg2dec; decoder-video/mpeg, mpegversion=(int)[ 1, 2 ], systemstream=(boolean)false; ']
++
++  -
++    name: gstreamer0.10-wildmidi
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "wildmidi"
++        version: "0.10.8"
++        description: "Wildmidi Plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-wildmidi; decoder-audio/midi; ']
++
++  -
++    name: gstreamer0.10-plugins-bad-doc
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-pitfdll
++    version: 0.9.1.1
++    architectures: ['i586']
++    plugins:
++      -
++        name: "pitfdll"
++        version: "0.9.1.1"
++        description: "DLL-loader elements"
++        origin: "http://ronald.bitfreak.net/pitfdll/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrnb
++    version: 0.10.9
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrnb"
++        version: "0.10.9"
++        description: "Adaptive Multi-Rate Narrow-Band"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrnbdec; decoder-audio/AMR, rate=(int)8000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-dc1394
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dc1394"
++        version: "0.10.8"
++        description: "1394 IIDC Video Source"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrwb
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrwb"
++        version: "0.10.8"
++        description: "Adaptive Multi-Rate Wide-Band"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrwbdec; decoder-audio/AMR-WB, rate=(int)16000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-cdio
++    version: 0.10.9
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "cdio"
++        version: "0.10.9"
++        description: "Read audio from audio CDs"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-cdiocddasrc; urisource-cdda; ']
++
++  -
++    name: gstreamer0.10-soundtouch
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "soundtouch"
++        version: "0.10.8"
++        description: "Audio Pitch Controller & BPM Detection"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-musepack
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "musepack"
++        version: "0.10.8"
++        description: "Musepack decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-musepackdec; decoder-audio/x-musepack, streamversion=(int)7; ']
++
++  -
++    name: gstreamer0.10-mms
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mms"
++        version: "0.10.8"
++        description: "Microsoft Multi Media Server streaming protocol support"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mmssrc; urisource-mms; ', 'element-mmssrc; urisource-mmsh; ', 'element-mmssrc; urisource-mmst; ', 'element-mmssrc; urisource-mmsu; ']
++
++  -
++    name: gstreamer0.10-ladspa
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ladspa"
++        version: "0.10.8"
++        description: "All LADSPA plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-dts
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dtsdec"
++        version: "0.10.8"
++        description: "Decodes DTS audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dtsdec; decoder-audio/x-dts; decoder-audio/x-private1-dts; ']
++
++  -
++    name: gstreamer0.10-gsm
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gsm"
++        version: "0.10.8"
++        description: "GSM encoder/decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gsmdec; decoder-audio/x-gsm, rate=(int)8000, channels=(int)1; decoder-audio/ms-gsm, rate=(int)[ 1, 2147483647 ], channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-ofa
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ofa"
++        version: "0.10.8"
++        description: "Calculate MusicIP fingerprint from audio files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-jack
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jack"
++        version: "0.10.8"
++        description: "Jack elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-ugly
++    version: 0.10.9
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "asf"
++        version: "0.10.9"
++        description: "Demuxes and muxes audio and video in Microsofts ASF format"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-asfdemux; decoder-video/x-ms-asf; ']
++      -
++        name: "dvdlpcmdec"
++        version: "0.10.9"
++        description: "Decode DVD LPCM frames into standard PCM"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdlpcmdec; decoder-audio/x-private1-lpcm; decoder-audio/x-lpcm, width=(int){ 16, 20, 24 }, rate=(int){ 32000, 44100, 48000, 96000 }, channels=(int)[ 1, 8 ], dynamic_range=(int)[ 0, 255 ], emphasis=(boolean){ true, false }, mute=(boolean){ true, false }; ']
++      -
++        name: "dvdread"
++        version: "0.10.9"
++        description: "Access a DVD with dvdread"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdreadsrc; urisource-dvd; ']
++      -
++        name: "dvdsub"
++        version: "0.10.9"
++        description: "DVD subtitle parser and decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdsubdec; decoder-video/x-dvd-subpicture; ']
++      -
++        name: "iec958"
++        version: "0.10.9"
++        description: "Convert raw AC3 into IEC958 (S/PDIF) frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mad"
++        version: "0.10.9"
++        description: "id3 tag manipulation and mp3 decoding based on the mad library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mad; decoder-audio/mpeg, mpegversion=(int)1, layer=(int)[ 1, 3 ], rate=(int){ 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000 }, channels=(int)[ 1, 2 ]; ']
++      -
++        name: "mpegaudioparse"
++        version: "0.10.9"
++        description: "MPEG-1 layer 1/2/3 audio stream elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegstream"
++        version: "0.10.9"
++        description: "MPEG system stream parser"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; ', 'element-dvddemux; decoder-video/mpeg, mpegversion=(int)2, systemstream=(boolean)true; ']
++      -
++        name: "realmedia"
++        version: "0.10.9"
++        description: "RealMedia demuxer and depayloader"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-rmdemux; decoder-application/vnd.rn-realmedia; ', 'element-rademux; decoder-application/x-pn-realaudio; ']
++
++  -
++    name: gstreamer0.10-faac
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faac"
++        version: "0.10.8"
++        description: "Free AAC Encoder (FAAC)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-faad
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faad"
++        version: "0.10.8"
++        description: "Free AAC Decoder (FAAD)"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-faad; decoder-audio/mpeg, mpegversion=(int){ 2, 4 }; ']
++
++  -
++    name: gstreamer0.10-plugins-bad
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "alsaspdif"
++        version: "0.10.8"
++        description: "Alsa plugin for S/PDIF output"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "app"
++        version: ""
++        description: ""
++        origin: ""
++        caps: ""
++      -
++        name: "bayer"
++        version: "0.10.8"
++        description: "Elements to convert Bayer images"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "bz2"
++        version: "0.10.8"
++        description: "Compress or decompress streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-bz2dec; decoder-application/x-bzip; ']
++      -
++        name: "cdaudio"
++        version: "0.10.8"
++        description: "Play CD audio through the CD Drive"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "cdxaparse"
++        version: "0.10.8"
++        description: "Parse a .dat file (VCD) into raw mpeg1"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "gstinterlace"
++        version: "0.10.8"
++        description: "Deinterlace video"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dvb"
++        version: "0.10.8"
++        description: "DVB elements"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvbbasebin; urisource-dvb; ']
++      -
++        name: "dvdspu"
++        version: "0.10.8"
++        description: "DVD Sub-picture Overlay element"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "fbdevsink"
++        version: "0.10.8"
++        description: "linux framebuffer video sink"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "festival"
++        version: "0.10.8"
++        description: "Synthesizes plain text into audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "filter"
++        version: "0.10.8"
++        description: "IIR audio filter element"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "flvdemux"
++        version: "0.10.8"
++        description: "Element demuxing FLV stream"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-flvdemux; decoder-video/x-flv; ']
++      -
++        name: "freeze"
++        version: "0.10.8"
++        description: "Stream freezer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "h264parse"
++        version: "0.10.8"
++        description: "Element parsing raw h264 streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "modplug"
++        version: "0.10.8"
++        description: ".MOD audio decoding"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-modplug; decoder-audio/x-mod; decoder-audio/x-xm; decoder-audio/x-it; decoder-audio/x-s3m; decoder-audio/x-stm; ']
++      -
++        name: "mpeg4videoparse"
++        version: "0.10.8"
++        description: "MPEG-4 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegtsparse"
++        version: "0.10.8"
++        description: "MPEG-2 transport stream parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegvideoparse"
++        version: "0.10.8"
++        description: "MPEG-1 and MPEG-2 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mve"
++        version: "0.10.8"
++        description: "Interplay MVE movie format manipulation"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mvedemux; decoder-video/x-mve; ']
++      -
++        name: "nsfdec"
++        version: "0.10.8"
++        description: "Uses nosefart to decode .nsf files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nsfdec; decoder-audio/x-nsf; ']
++      -
++        name: "nuvdemux"
++        version: "0.10.8"
++        description: "Demuxes and muxes audio and video"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nuvdemux; decoder-video/x-nuv; ']
++      -
++        name: "oss4"
++        version: "0.10.8"
++        description: "Open Sound System (OSS) version 4 support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "rawparse"
++        version: "0.10.8"
++        description: "Parses byte streams into raw frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "real"
++        version: "0.10.8"
++        description: "Decode REAL streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-realvideodec; decoder-video/x-pn-realvideo, rmversion=(int)[ 2, 4 ]; ', 'element-realaudiodec; decoder-audio/x-pn-realaudio, raversion=(int){ 3, 4, 5, 6, 8 }; decoder-audio/x-sipro; ']
++      -
++        name: "rfbsrc"
++        version: "0.10.8"
++        description: "Connects to a VNC server and decodes RFB stream"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "gstrtpmanager"
++        version: "0.10.8"
++        description: "RTP session management plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdl"
++        version: "0.10.8"
++        description: "SDL (Simple DirectMedia Layer) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdp"
++        version: "0.10.8"
++        description: "configure streaming sessions using SDP"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sdpdemux; decoder-application/sdp; ']
++      -
++        name: "selector"
++        version: "0.10.8"
++        description: "input/output stream selector elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sndfile"
++        version: "0.10.8"
++        description: "use libsndfile to read and write audio from and to files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "speed"
++        version: "0.10.8"
++        description: "Set speed/pitch on audio/raw streams (resampler)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "speexresample"
++        version: "0.10.8"
++        description: "Resamples audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "stereo"
++        version: "0.10.8"
++        description: "Muck with the stereo signal, enhance it's 'stereo-ness'"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "subenc"
++        version: "0.10.8"
++        description: "subtitle encoders"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "musicbrainz"
++        version: "0.10.8"
++        description: "A TRM signature producer based on libmusicbrainz"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "tta"
++        version: "0.10.8"
++        description: "TTA lossless audio format handling"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-ttaparse; decoder-audio/x-ttafile; ', 'element-ttadec; decoder-audio/x-tta, width=(int){ 8, 16, 24 }, channels=(int){ 1, 2 }, rate=(int)[ 8000, 96000 ]; ']
++      -
++        name: "vcdsrc"
++        version: "0.10.8"
++        description: "Asynchronous read from VCD disk"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vcdsrc; urisource-vcd; ']
++      -
++        name: "videosignal"
++        version: "0.10.8"
++        description: "Various video signal analysers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "vmnc"
++        version: "0.10.8"
++        description: "VMnc video plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vmncdec; decoder-video/x-vmnc, version=(int)1, framerate=(fraction)[ 0/1, 2147483647/1 ], width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ]; ']
++      -
++        name: "y4menc"
++        version: "0.10.8"
++        description: "Encodes a YUV frame into the yuv4mpeg format (mjpegtools)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-x264
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "x264"
++        version: "0.10.8"
++        description: "libx264-based H264 plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg2enc
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2enc"
++        version: "0.10.8"
++        description: "High-quality MPEG-1/2 video encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mplex"
++        version: "0.10.8"
++        description: "High-quality MPEG/DVD/SVCD/VCD video/audio multiplexer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-neon
++    version: 0.10.8
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "neon"
++        version: "0.10.8"
++        description: "lib neon http client src"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-neonhttpsrc; urisource-http; ', 'element-neonhttpsrc; urisource-https; ']
++
++  -
++    name: gstreamer0.10-a52dec
++    version: 0.10.9
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "a52dec"
++        version: "0.10.9"
++        description: "Decodes ATSC A/52 encoded audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-a52dec; decoder-audio/x-ac3; decoder-audio/ac3; decoder-audio/x-private1-ac3; ']
++
+diff --git a/providers/plf_2009.1.tmpl b/providers/plf_2009.1.tmpl
+new file mode 100644
+index 0000000..7dcfa2b
+--- /dev/null
++++ b/providers/plf_2009.1.tmpl
+@@ -0,0 +1,5 @@
++# this file contains products data that should be included in the plugin list,
++# but are not available inside the plugin
++id: plf 
++flavor-distro: mandrivalinux
++flavor-distro-version: 2009.1
+diff --git a/providers/plf_2009.1.yaml b/providers/plf_2009.1.yaml
+new file mode 100644
+index 0000000..c7df69d
+--- /dev/null
++++ b/providers/plf_2009.1.yaml
+@@ -0,0 +1,818 @@
++# WARNING: this file is generated. Do *NOT* edit!
++products:
++  -
++    name: gstreamer0.10-directfb
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dfbvideosink"
++        version: "0.10.11"
++        description: "DirectFB video output plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-nas
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "nas"
++        version: "0.10.11"
++        description: "NAS (Network Audio System) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-sid
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "siddec"
++        version: "0.10.11"
++        description: "Uses libsidplay to decode .sid files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-siddec; decoder-audio/x-sid; ']
++
++  -
++    name: gstreamer0.10-metadata
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "metadata"
++        version: "0.10.11"
++        description: "Metadata (EXIF, IPTC and XMP) image (JPEG, TIFF) demuxer and muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xvid
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xvid"
++        version: "0.10.11"
++        description: "XviD plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-xviddec; decoder-video/x-xvid, width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ']
++
++  -
++    name: gstreamer0.10-lame
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "lame"
++        version: "0.10.11"
++        description: "Encode MP3s with LAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xing
++    version: 0.10.2
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xingenc"
++        version: "0.10.2"
++        description: "Xing MP3 Encoder"
++        origin: "http://banshee-project.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2dec"
++        version: "0.10.11"
++        description: "LibMpeg2 decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpeg2dec; decoder-video/mpeg, mpegversion=(int)[ 1, 2 ], systemstream=(boolean)false; ']
++
++  -
++    name: gstreamer0.10-faac
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faac"
++        version: "0.10.11"
++        description: "Free AAC Encoder (FAAC)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-wildmidi
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "wildmidi"
++        version: ""
++        description: ""
++        origin: ""
++        caps: ""
++
++  -
++    name: gstreamer0.10-plugins-bad-doc
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-pitfdll
++    version: 0.9.1.1
++    architectures: ['i586']
++    plugins:
++      -
++        name: "pitfdll"
++        version: "0.9.1.1"
++        description: "DLL-loader elements"
++        origin: "http://ronald.bitfreak.net/pitfdll/"
++        caps: ['element-dshowdec_ir50_32v5; decoder-video/x-indeo, indeoversion=(int)5, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dshowdec_ir41_32v4; decoder-video/x-indeo, indeoversion=(int)4, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmv9dmodv3; decoder-video/x-wmv, wmvversion=(int)3, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmvdmodv1; decoder-video/x-wmv, wmvversion=(int)1, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmvdmodv2; decoder-video/x-wmv, wmvversion=(int)2, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmvdmodv3; decoder-video/x-wmv, wmvversion=(int)3, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmadmodv1; decoder-audio/x-wma, wmaversion=(int)1, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-dmodec_wmadmodv2; decoder-audio/x-wma, wmaversion=(int)2, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-dmodec_wmadmodv3; decoder-audio/x-wma, wmaversion=(int)3, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-dmodec_wmspdmodv1; decoder-audio/x-wms, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-qtadec_bin; decoder-audio/x-qdm2, samplerate=(int)[ 8000, 96000 ], channels=(int)[ 1, 8 ], framesize=(int)[ 0, 2147483647 ]; ']
++
++  -
++    name: gstreamer0.10-amrnb
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrnb"
++        version: "0.10.11"
++        description: "Adaptive Multi-Rate Narrow-Band"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrnbdec; decoder-audio/AMR, rate=(int)8000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-dc1394
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dc1394"
++        version: "0.10.11"
++        description: "1394 IIDC Video Source"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrwb
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrwb"
++        version: "0.10.11"
++        description: "Adaptive Multi-Rate Wide-Band"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrwbdec; decoder-audio/AMR-WB, rate=(int)16000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-cdio
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "cdio"
++        version: "0.10.11"
++        description: "Read audio from audio CDs"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-cdiocddasrc; urisource-cdda; ']
++
++  -
++    name: gstreamer0.10-soundtouch
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "soundtouch"
++        version: "0.10.11"
++        description: "Audio Pitch Controller & BPM Detection"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-musepack
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "musepack"
++        version: "0.10.11"
++        description: "Musepack decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-musepackdec; decoder-audio/x-musepack, streamversion=(int)7; ']
++
++  -
++    name: gstreamer0.10-mms
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mms"
++        version: "0.10.11"
++        description: "Microsoft Multi Media Server streaming protocol support"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mmssrc; urisource-mms; ', 'element-mmssrc; urisource-mmsh; ', 'element-mmssrc; urisource-mmst; ', 'element-mmssrc; urisource-mmsu; ']
++
++  -
++    name: gstreamer0.10-ladspa
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ladspa"
++        version: "0.10.11"
++        description: "All LADSPA plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-dts
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dtsdec"
++        version: "0.10.11"
++        description: "Decodes DTS audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dtsdec; decoder-audio/x-dts; decoder-audio/x-private1-dts; ']
++
++  -
++    name: gstreamer0.10-gsm
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gsm"
++        version: "0.10.11"
++        description: "GSM encoder/decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gsmdec; decoder-audio/x-gsm, rate=(int)8000, channels=(int)1; decoder-audio/ms-gsm, rate=(int)[ 1, 2147483647 ], channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-jp2k
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jp2k"
++        version: "1.900.1"
++        description: "Jasper-based JPEG2000 image decoder/encoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-jp2kdec; decoder-image/x-j2c, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/x-jpc, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/jp2; ', 'element-jp2kenc; decoder-video/x-raw-rgb, bpp=(int)24, depth=(int)24, endianness=(int)4321, red_mask=(int)16711680, green_mask=(int)65280, blue_mask=(int)255, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)24, depth=(int)24, endianness=(int)4321, red_mask=(int)255, green_mask=(int)65280, blue_mask=(int)16711680, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)-16777216, green_mask=(int)16711680, blue_mask=(int)65280, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)16711680, green_mask=(int)65280, blue_mask=(int)255, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)65280, green_mask=(int)16711680, blue_mask=(int)-16777216, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)255, green_mask=(int)65280, blue_mask=(int)16711680, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-yuv, format=(fourcc){ I420, YV12 }, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ']
++
++  -
++    name: gstreamer0.10-dirac
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dirac"
++        version: "0.10.11"
++        description: "Dirac plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-jack
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jack"
++        version: "0.10.11"
++        description: "Jack elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-ugly
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "asf"
++        version: "0.10.11"
++        description: "Demuxes and muxes audio and video in Microsofts ASF format"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-asfdemux; decoder-video/x-ms-asf; ']
++      -
++        name: "dvdlpcmdec"
++        version: "0.10.11"
++        description: "Decode DVD LPCM frames into standard PCM"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdlpcmdec; decoder-audio/x-private1-lpcm; decoder-audio/x-lpcm, width=(int){ 16, 20, 24 }, rate=(int){ 32000, 44100, 48000, 96000 }, channels=(int)[ 1, 8 ], dynamic_range=(int)[ 0, 255 ], emphasis=(boolean){ true, false }, mute=(boolean){ true, false }; ']
++      -
++        name: "dvdread"
++        version: "0.10.11"
++        description: "Access a DVD with dvdread"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdreadsrc; urisource-dvd; ']
++      -
++        name: "dvdsub"
++        version: "0.10.11"
++        description: "DVD subtitle parser and decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdsubdec; decoder-video/x-dvd-subpicture; ']
++      -
++        name: "iec958"
++        version: "0.10.11"
++        description: "Convert raw AC3 into IEC958 (S/PDIF) frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mad"
++        version: "0.10.11"
++        description: "id3 tag manipulation and mp3 decoding based on the mad library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mad; decoder-audio/mpeg, mpegversion=(int)1, layer=(int)[ 1, 3 ], rate=(int){ 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000 }, channels=(int)[ 1, 2 ]; ']
++      -
++        name: "mpegaudioparse"
++        version: "0.10.11"
++        description: "MPEG-1 layer 1/2/3 audio stream elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegstream"
++        version: "0.10.11"
++        description: "MPEG system stream parser"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; ', 'element-dvddemux; decoder-video/mpeg, mpegversion=(int)2, systemstream=(boolean)true; ']
++      -
++        name: "realmedia"
++        version: "0.10.11"
++        description: "RealMedia support plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-rmdemux; decoder-application/vnd.rn-realmedia; ', 'element-rademux; decoder-application/x-pn-realaudio; ', 'element-pnmsrc; urisource-pnm; ']
++
++  -
++    name: gstreamer0.10-resindvd
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "resindvd"
++        version: "0.10.11"
++        description: "Resin DVD playback elements"
++        origin: "http://gstreamer.net/"
++        caps: []
++
++  -
++    name: gstreamer0.10-faad
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faad"
++        version: "0.10.11"
++        description: "Free AAC Decoder (FAAD)"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-faad; decoder-audio/mpeg, mpegversion=(int){ 2, 4 }; ']
++
++  -
++    name: gstreamer0.10-ofa
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ofa"
++        version: "0.10.11"
++        description: "Calculate MusicIP fingerprint from audio files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-bad
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "aacparse"
++        version: "0.10.11"
++        description: "Advanced Audio Coding Parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "aiffparse"
++        version: "0.10.11"
++        description: "Parse an .aiff file into raw audio"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-aiffparse; decoder-audio/x-aiff; ']
++      -
++        name: "alsaspdif"
++        version: "0.10.11"
++        description: "Alsa plugin for S/PDIF output"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "amrparse"
++        version: "0.10.11"
++        description: "Adaptive Multi-Rate Parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "apex"
++        version: "0.10.11"
++        description: "Apple AirPort Express Plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "autoconvert"
++        version: "0.10.11"
++        description: "Selects convertor element based on caps"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "bayer"
++        version: "0.10.11"
++        description: "Elements to convert Bayer images"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "bz2"
++        version: "0.10.11"
++        description: "Compress or decompress streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-bz2dec; decoder-application/x-bzip; ']
++      -
++        name: "camerabin"
++        version: ""
++        description: ""
++        origin: ""
++        caps: ""
++      -
++        name: "cdaudio"
++        version: "0.10.11"
++        description: "Play CD audio through the CD Drive"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "cdxaparse"
++        version: "0.10.11"
++        description: "Parse a .dat file (VCD) into raw mpeg1"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dccp"
++        version: "0.10.11"
++        description: "transfer data over the network via DCCP."
++        origin: "http://garage.maemo.org/projects/ephone"
++        caps: []
++      -
++        name: "gstinterlace"
++        version: "0.10.11"
++        description: "Deinterlace video"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "deinterlace2"
++        version: "0.10.11"
++        description: "Deinterlacer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dtmf"
++        version: "0.10.11"
++        description: "DTMF plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dvb"
++        version: "0.10.11"
++        description: "DVB elements"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvbbasebin; urisource-dvb; ']
++      -
++        name: "dvdspu"
++        version: "0.10.11"
++        description: "DVD Sub-picture Overlay element"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "fbdevsink"
++        version: "0.10.11"
++        description: "linux framebuffer video sink"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "festival"
++        version: "0.10.11"
++        description: "Synthesizes plain text into audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "flv"
++        version: "0.10.11"
++        description: "FLV muxing and demuxing plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-flvdemux; decoder-video/x-flv; ']
++      -
++        name: "freeze"
++        version: "0.10.11"
++        description: "Stream freezer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "h264parse"
++        version: "0.10.11"
++        description: "Element parsing raw h264 streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "legacyresample"
++        version: "0.10.11"
++        description: "Resamples audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "liveadder"
++        version: "0.10.11"
++        description: "Adds multiple live discontinuous streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mimic"
++        version: "0.10.11"
++        description: "Mimic codec"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mimdec; decoder-video/x-mimic; ']
++      -
++        name: "modplug"
++        version: "0.10.11"
++        description: ".MOD audio decoding"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-modplug; decoder-audio/x-mod; decoder-audio/x-xm; decoder-audio/x-it; decoder-audio/x-s3m; decoder-audio/x-stm; ']
++      -
++        name: "mpeg4videoparse"
++        version: "0.10.11"
++        description: "MPEG-4 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegdemux2"
++        version: "0.10.11"
++        description: "MPEG demuxers"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegpsdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; decoder-video/x-cdxa; ', 'element-mpegtsdemux; decoder-video/mpegts; ']
++      -
++        name: "mpegtsmux"
++        version: "0.10.11"
++        description: "MPEG-TS muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegvideoparse"
++        version: "0.10.11"
++        description: "MPEG-1 and MPEG-2 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mve"
++        version: "0.10.11"
++        description: "Interplay MVE movie format manipulation"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mvedemux; decoder-video/x-mve; ']
++      -
++        name: "mxf"
++        version: "0.10.11"
++        description: "MXF plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mxfdemux; decoder-application/mxf; ']
++      -
++        name: "nsfdec"
++        version: "0.10.11"
++        description: "Uses nosefart to decode .nsf files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nsfdec; decoder-audio/x-nsf; ']
++      -
++        name: "nuvdemux"
++        version: "0.10.11"
++        description: "Demuxes and muxes audio and video"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nuvdemux; decoder-video/x-nuv; ']
++      -
++        name: "oss4"
++        version: "0.10.11"
++        description: "Open Sound System (OSS) version 4 support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "pcapparse"
++        version: "0.10.11"
++        description: "Element parsing raw pcap streams"
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "qtmux"
++        version: "0.10.11"
++        description: "Quicktime Muxer plugin"
++        origin: "embedded.ufcg.edu.br"
++        caps: []
++      -
++        name: "rawparse"
++        version: "0.10.11"
++        description: "Parses byte streams into raw frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "real"
++        version: "0.10.11"
++        description: "Decode REAL streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-realvideodec; decoder-video/x-pn-realvideo, rmversion=(int)[ 2, 4 ]; ', 'element-realaudiodec; decoder-audio/x-pn-realaudio, raversion=(int){ 3, 4, 5, 6, 8 }; decoder-audio/x-sipro; ']
++      -
++        name: "rfbsrc"
++        version: "0.10.11"
++        description: "Connects to a VNC server and decodes RFB stream"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "gstrtpmanager"
++        version: "0.10.11"
++        description: "RTP session management plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "rtpmux"
++        version: "0.10.11"
++        description: "RTP Muxer plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "scaletempo"
++        version: "0.10.11"
++        description: "Scale audio tempo in sync with playback rate"
++        origin: "http://gstreamer.freedesktop.org/"
++        caps: []
++      -
++        name: "sdl"
++        version: "0.10.11"
++        description: "SDL (Simple DirectMedia Layer) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdp"
++        version: "0.10.11"
++        description: "configure streaming sessions using SDP"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sdpdemux; decoder-application/sdp; ']
++      -
++        name: "selector"
++        version: "0.10.11"
++        description: "input/output stream selector elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "gstsiren"
++        version: "0.10.11"
++        description: "Siren encoder/decoder/payloader/depayloader plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sirendec; decoder-audio/x-siren, dct-length=(int)320; ']
++      -
++        name: "sndfile"
++        version: "0.10.11"
++        description: "use libsndfile to read and write audio from and to files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "speed"
++        version: "0.10.11"
++        description: "Set speed/pitch on audio/raw streams (resampler)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "stereo"
++        version: "0.10.11"
++        description: "Muck with the stereo signal, enhance it's 'stereo-ness'"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "subenc"
++        version: "0.10.11"
++        description: "subtitle encoders"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "musicbrainz"
++        version: "0.10.11"
++        description: "A TRM signature producer based on libmusicbrainz"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "tta"
++        version: "0.10.11"
++        description: "TTA lossless audio format handling"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-ttaparse; decoder-audio/x-ttafile; ', 'element-ttadec; decoder-audio/x-tta, width=(int){ 8, 16, 24 }, channels=(int){ 1, 2 }, rate=(int)[ 8000, 96000 ]; ']
++      -
++        name: "valve"
++        version: "0.10.11"
++        description: "Valve"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "vcdsrc"
++        version: "0.10.11"
++        description: "Asynchronous read from VCD disk"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vcdsrc; urisource-vcd; ']
++      -
++        name: "videosignal"
++        version: "0.10.11"
++        description: "Various video signal analysers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "vmnc"
++        version: "0.10.11"
++        description: "VMnc video plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vmncdec; decoder-video/x-vmnc, version=(int)1, framerate=(fraction)[ 0/1, 2147483647/1 ], width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ]; ']
++      -
++        name: "xdgmime"
++        version: "0.10.11"
++        description: "XDG-MIME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "y4menc"
++        version: "0.10.11"
++        description: "Encodes a YUV frame into the yuv4mpeg format (mjpegtools)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-twolame
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "twolame"
++        version: "0.10.11"
++        description: "Encode MP2s with TwoLAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-x264
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "x264"
++        version: "0.10.11"
++        description: "libx264-based H264 plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg2enc
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2enc"
++        version: "0.10.11"
++        description: "High-quality MPEG-1/2 video encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mplex"
++        version: "0.10.11"
++        description: "High-quality MPEG/DVD/SVCD/VCD video/audio multiplexer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-neon
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "neon"
++        version: "0.10.11"
++        description: "lib neon http client src"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-neonhttpsrc; urisource-http; ', 'element-neonhttpsrc; urisource-https; ']
++
++  -
++    name: gstreamer0.10-a52dec
++    version: 0.10.11
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "a52dec"
++        version: "0.10.11"
++        description: "Decodes ATSC A/52 encoded audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-a52dec; decoder-audio/x-ac3; decoder-audio/ac3; decoder-audio/x-private1-ac3; ']
++
+diff --git a/providers/plf_2010.0.tmpl b/providers/plf_2010.0.tmpl
+new file mode 100644
+index 0000000..bc1997c
+--- /dev/null
++++ b/providers/plf_2010.0.tmpl
+@@ -0,0 +1,6 @@
++# this file contains products data that should be included in the plugin list,
++# but are not available inside the plugin
++id: plf 
++flavor-distro: mandrivalinux
++flavor-distro-version: 2010.0
++
+diff --git a/providers/plf_2010.0.yaml b/providers/plf_2010.0.yaml
+new file mode 100644
+index 0000000..63e14f4
+--- /dev/null
++++ b/providers/plf_2010.0.yaml
+@@ -0,0 +1,890 @@
++# WARNING: this file is generated. Do *NOT* edit!
++products:
++  -
++    name: gstreamer0.10-directfb
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dfbvideosink"
++        version: "0.10.14"
++        description: "DirectFB video output plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-nas
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "nas"
++        version: "0.10.14"
++        description: "NAS (Network Audio System) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-sid
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "siddec"
++        version: "0.10.12"
++        description: "Uses libsidplay to decode .sid files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-siddec; decoder-audio/x-sid; ']
++
++  -
++    name: gstreamer0.10-metadata
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "metadata"
++        version: "0.10.14"
++        description: "Metadata (EXIF, IPTC and XMP) image (JPEG, TIFF) demuxer and muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xvid
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xvid"
++        version: "0.10.14"
++        description: "XviD plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-xviddec; decoder-video/x-xvid, width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ']
++
++  -
++    name: gstreamer0.10-lame
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "lame"
++        version: "0.10.12"
++        description: "Encode MP3s with LAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xing
++    version: 0.10.2
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xingenc"
++        version: "0.10.2"
++        description: "Xing MP3 Encoder"
++        origin: "http://banshee-project.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2dec"
++        version: "0.10.12"
++        description: "LibMpeg2 decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpeg2dec; decoder-video/mpeg, mpegversion=(int)[ 1, 2 ], systemstream=(boolean)false; ']
++
++  -
++    name: gstreamer0.10-resindvd
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "resindvd"
++        version: "0.10.14"
++        description: "Resin DVD playback elements"
++        origin: "http://gstreamer.net/"
++        caps: []
++
++  -
++    name: gstreamer0.10-wildmidi
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "wildmidi"
++        version: ""
++        description: ""
++        origin: ""
++        caps: ""
++
++  -
++    name: gstreamer0.10-plugins-bad-doc
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-gme
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gmedec"
++        version: "0.10.14"
++        description: "GME Audio Decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gmedec; decoder-audio/x-ay; decoder-audio/x-gbs; decoder-audio/x-gym; decoder-audio/x-hes; decoder-audio/x-kss; decoder-audio/x-nsf; decoder-audio/x-sap; decoder-audio/x-spc; decoder-audio/x-vgm; ']
++
++  -
++    name: gstreamer0.10-celt
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "celt"
++        version: "0.10.14"
++        description: "CELT plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-celtdec; decoder-audio/x-celt; ']
++
++  -
++    name: gstreamer0.10-pitfdll
++    version: 0.9.1.1
++    architectures: ['i586']
++    plugins:
++      -
++        name: "pitfdll"
++        version: "0.9.1.1"
++        description: "DLL-loader elements"
++        origin: "http://ronald.bitfreak.net/pitfdll/"
++        caps: ['element-dshowdec_ir50_32v5; decoder-video/x-indeo, indeoversion=(int)5, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dshowdec_ir41_32v4; decoder-video/x-indeo, indeoversion=(int)4, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmv9dmodv3; decoder-video/x-wmv, wmvversion=(int)3, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmvdmodv1; decoder-video/x-wmv, wmvversion=(int)1, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmvdmodv2; decoder-video/x-wmv, wmvversion=(int)2, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmvdmodv3; decoder-video/x-wmv, wmvversion=(int)3, width=(int)[ 16, 4096 ], height=(int)[ 16, 4096 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ', 'element-dmodec_wmadmodv1; decoder-audio/x-wma, wmaversion=(int)1, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-dmodec_wmadmodv2; decoder-audio/x-wma, wmaversion=(int)2, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-dmodec_wmadmodv3; decoder-audio/x-wma, wmaversion=(int)3, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-dmodec_wmspdmodv1; decoder-audio/x-wms, block_align=(int)[ 0, 2147483647 ], bitrate=(int)[ 0, 2147483647 ]; ', 'element-qtadec_bin; decoder-audio/x-qdm2, samplerate=(int)[ 8000, 96000 ], channels=(int)[ 1, 8 ], framesize=(int)[ 0, 2147483647 ]; ']
++
++  -
++    name: gstreamer0.10-amrnb
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrnb"
++        version: "0.10.12"
++        description: "Adaptive Multi-Rate Narrow-Band"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrnbdec; decoder-audio/AMR, rate=(int)8000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-dc1394
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dc1394"
++        version: "0.10.14"
++        description: "1394 IIDC Video Source"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-voip
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dtmf"
++        version: "0.10.14"
++        description: "DTMF plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "liveadder"
++        version: "0.10.14"
++        description: "Adds multiple live discontinuous streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "rtpmux"
++        version: "0.10.14"
++        description: "RTP Muxer plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "valve"
++        version: "0.10.14"
++        description: "Valve"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrwb
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrwbenc"
++        version: "0.10.14"
++        description: "Adaptive Multi-Rate Wide-Band Encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-cdio
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "cdio"
++        version: "0.10.12"
++        description: "Read audio from audio CDs"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-cdiocddasrc; urisource-cdda; ']
++
++  -
++    name: gstreamer0.10-soundtouch
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "soundtouch"
++        version: "0.10.14"
++        description: "Audio Pitch Controller & BPM Detection"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-musepack
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "musepack"
++        version: "0.10.14"
++        description: "Musepack decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-musepackdec; decoder-audio/x-musepack, streamversion=(int)7; ']
++
++  -
++    name: gstreamer0.10-mms
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mms"
++        version: "0.10.14"
++        description: "Microsoft Multi Media Server streaming protocol support"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mmssrc; urisource-mms; ', 'element-mmssrc; urisource-mmsh; ', 'element-mmssrc; urisource-mmst; ', 'element-mmssrc; urisource-mmsu; ']
++
++  -
++    name: gstreamer0.10-ladspa
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ladspa"
++        version: "0.10.14"
++        description: "All LADSPA plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-dts
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dtsdec"
++        version: "0.10.14"
++        description: "Decodes DTS audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dtsdec; decoder-audio/x-dts; decoder-audio/x-private1-dts; ']
++
++  -
++    name: gstreamer0.10-schroedinger
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "schro"
++        version: "0.10.14"
++        description: "Schroedinger plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-schrodec; decoder-video/x-dirac; ']
++
++  -
++    name: gstreamer0.10-gsm
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gsm"
++        version: "0.10.14"
++        description: "GSM encoder/decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gsmdec; decoder-audio/x-gsm, rate=(int)8000, channels=(int)1; decoder-audio/ms-gsm, rate=(int)[ 1, 2147483647 ], channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-jp2k
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jp2k"
++        version: "1.900.1"
++        description: "Jasper-based JPEG2000 image decoder/encoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-jp2kdec; decoder-image/x-j2c, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/x-jpc, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/jp2; ', 'element-jp2kenc; decoder-video/x-raw-rgb, bpp=(int)24, depth=(int)24, endianness=(int)4321, red_mask=(int)16711680, green_mask=(int)65280, blue_mask=(int)255, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)24, depth=(int)24, endianness=(int)4321, red_mask=(int)255, green_mask=(int)65280, blue_mask=(int)16711680, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)-16777216, green_mask=(int)16711680, blue_mask=(int)65280, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)16711680, green_mask=(int)65280, blue_mask=(int)255, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)65280, green_mask=(int)16711680, blue_mask=(int)-16777216, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-rgb, bpp=(int)32, depth=(int)24, endianness=(int)4321, red_mask=(int)255, green_mask=(int)65280, blue_mask=(int)16711680, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; decoder-video/x-raw-yuv, format=(fourcc){ I420, YV12 }, width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ']
++
++  -
++    name: gstreamer0.10-dirac
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dirac"
++        version: "0.10.14"
++        description: "Dirac plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-jack
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jack"
++        version: "0.10.14"
++        description: "Jack elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-ugly
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "asf"
++        version: "0.10.12"
++        description: "Demuxes and muxes audio and video in Microsofts ASF format"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-asfdemux; decoder-video/x-ms-asf; ']
++      -
++        name: "dvdlpcmdec"
++        version: "0.10.12"
++        description: "Decode DVD LPCM frames into standard PCM"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdlpcmdec; decoder-audio/x-private1-lpcm; decoder-audio/x-lpcm, width=(int){ 16, 20, 24 }, rate=(int){ 32000, 44100, 48000, 96000 }, channels=(int)[ 1, 8 ], dynamic_range=(int)[ 0, 255 ], emphasis=(boolean){ true, false }, mute=(boolean){ true, false }; ']
++      -
++        name: "dvdread"
++        version: "0.10.12"
++        description: "Access a DVD with dvdread"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdreadsrc; urisource-dvd; ']
++      -
++        name: "dvdsub"
++        version: "0.10.12"
++        description: "DVD subtitle parser and decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdsubdec; decoder-video/x-dvd-subpicture; ']
++      -
++        name: "iec958"
++        version: "0.10.12"
++        description: "Convert raw AC3 into IEC958 (S/PDIF) frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mad"
++        version: "0.10.12"
++        description: "mp3 decoding based on the mad library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mad; decoder-audio/mpeg, mpegversion=(int)1, layer=(int)[ 1, 3 ], rate=(int){ 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000 }, channels=(int)[ 1, 2 ]; ']
++      -
++        name: "mpegaudioparse"
++        version: "0.10.12"
++        description: "MPEG-1 layer 1/2/3 audio stream elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegstream"
++        version: "0.10.12"
++        description: "MPEG system stream parser"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; ', 'element-dvddemux; decoder-video/mpeg, mpegversion=(int)2, systemstream=(boolean)true; ']
++      -
++        name: "realmedia"
++        version: "0.10.12"
++        description: "RealMedia support plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-rmdemux; decoder-application/vnd.rn-realmedia; ', 'element-rademux; decoder-application/x-pn-realaudio; ', 'element-pnmsrc; urisource-pnm; ']
++
++  -
++    name: gstreamer0.10-faac
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faac"
++        version: "0.10.14"
++        description: "Free AAC Encoder (FAAC)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-faad
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faad"
++        version: "0.10.14"
++        description: "Free AAC Decoder (FAAD)"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-faad; decoder-audio/mpeg, mpegversion=(int){ 2, 4 }; ']
++
++  -
++    name: gstreamer0.10-ofa
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ofa"
++        version: "0.10.14"
++        description: "Calculate MusicIP fingerprint from audio files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-bad
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "aacparse"
++        version: "0.10.14"
++        description: "Advanced Audio Coding Parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "adpcmdec"
++        version: "0.10.14"
++        description: "ADPCM decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-msadpcmdec; decoder-audio/x-adpcm, layout=(string)microsoft, block_align=(int)[ 64, 8096 ], rate=(int)[ 1, 2147483647 ], channels=(int)[ 1, 2 ]; ']
++      -
++        name: "aiffparse"
++        version: "0.10.14"
++        description: "Parse an .aiff file into raw audio"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-aiffparse; decoder-audio/x-aiff; ']
++      -
++        name: "alsaspdif"
++        version: "0.10.14"
++        description: "Alsa plugin for S/PDIF output"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "amrparse"
++        version: "0.10.14"
++        description: "Adaptive Multi-Rate Parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "apex"
++        version: "0.10.14"
++        description: "Apple AirPort Express Plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "asfmux"
++        version: "0.10.14"
++        description: "ASF Muxer Plugin"
++        origin: "embedded.ufcg.edu.br"
++        caps: []
++      -
++        name: "autoconvert"
++        version: "0.10.14"
++        description: "Selects convertor element based on caps"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "bayer"
++        version: "0.10.14"
++        description: "Elements to convert Bayer images"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "bz2"
++        version: "0.10.14"
++        description: "Compress or decompress streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-bz2dec; decoder-application/x-bzip; ']
++      -
++        name: "camerabin"
++        version: "0.10.14"
++        description: "High level api for DC (Digital Camera) application"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "cdaudio"
++        version: "0.10.14"
++        description: "Play CD audio through the CD Drive"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "cdxaparse"
++        version: "0.10.14"
++        description: "Parse a .dat file (VCD) into raw mpeg1"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dccp"
++        version: "0.10.14"
++        description: "transfer data over the network via DCCP."
++        origin: "http://garage.maemo.org/projects/ephone"
++        caps: []
++      -
++        name: "debugutilsbad"
++        version: "0.10.14"
++        description: "Collection of elements that may or may not be useful for debugging"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dvb"
++        version: "0.10.14"
++        description: "DVB elements"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvbbasebin; urisource-dvb; ']
++      -
++        name: "dvdspu"
++        version: "0.10.14"
++        description: "DVD Sub-picture Overlay element"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "fbdevsink"
++        version: "0.10.14"
++        description: "linux framebuffer video sink"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "festival"
++        version: "0.10.14"
++        description: "Synthesizes plain text into audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "freeze"
++        version: "0.10.14"
++        description: "Stream freezer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "frei0r"
++        version: "0.10.14"
++        description: "frei0r plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "h264parse"
++        version: "0.10.14"
++        description: "Element parsing raw h264 streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "hdvparse"
++        version: "0.10.14"
++        description: "HDV private stream parser"
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "id3tag"
++        version: "0.10.14"
++        description: "ID3 v1 and v2 muxing plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "legacyresample"
++        version: "0.10.14"
++        description: "Resamples audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mimic"
++        version: "0.10.14"
++        description: "Mimic codec"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mimdec; decoder-video/x-mimic; ']
++      -
++        name: "modplug"
++        version: "0.10.14"
++        description: ".MOD audio decoding"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-modplug; decoder-audio/x-mod; decoder-audio/x-xm; decoder-audio/x-it; decoder-audio/x-s3m; decoder-audio/x-stm; ']
++      -
++        name: "mpeg4videoparse"
++        version: "0.10.14"
++        description: "MPEG-4 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegdemux2"
++        version: "0.10.14"
++        description: "MPEG demuxers"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegpsdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; decoder-video/x-cdxa; ', 'element-mpegtsdemux; decoder-video/mpegts; ']
++      -
++        name: "mpegtsmux"
++        version: "0.10.14"
++        description: "MPEG-TS muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegvideoparse"
++        version: "0.10.14"
++        description: "MPEG-1 and MPEG-2 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mve"
++        version: "0.10.14"
++        description: "Interplay MVE movie format manipulation"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mvedemux; decoder-video/x-mve; ']
++      -
++        name: "mxf"
++        version: "0.10.14"
++        description: "MXF plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mxfdemux; decoder-application/mxf; ']
++      -
++        name: "nsfdec"
++        version: "0.10.14"
++        description: "Uses nosefart to decode .nsf files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nsfdec; decoder-audio/x-nsf; ']
++      -
++        name: "nuvdemux"
++        version: "0.10.14"
++        description: "Demuxes and muxes audio and video"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nuvdemux; decoder-video/x-nuv; ']
++      -
++        name: "oss4"
++        version: "0.10.14"
++        description: "Open Sound System (OSS) version 4 support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "pcapparse"
++        version: "0.10.14"
++        description: "Element parsing raw pcap streams"
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "qtmux"
++        version: "0.10.14"
++        description: "Quicktime Muxer plugin"
++        origin: "embedded.ufcg.edu.br"
++        caps: []
++      -
++        name: "rawparse"
++        version: "0.10.14"
++        description: "Parses byte streams into raw frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "real"
++        version: "0.10.14"
++        description: "Decode REAL streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-realvideodec; decoder-video/x-pn-realvideo, rmversion=(int)[ 2, 4 ]; ', 'element-realaudiodec; decoder-audio/x-pn-realaudio, raversion=(int){ 3, 4, 5, 6, 8 }; decoder-audio/x-sipro; ']
++      -
++        name: "rfbsrc"
++        version: "0.10.14"
++        description: "Connects to a VNC server and decodes RFB stream"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "scaletempo"
++        version: "0.10.14"
++        description: "Scale audio tempo in sync with playback rate"
++        origin: "http://gstreamer.freedesktop.org/"
++        caps: []
++      -
++        name: "sdl"
++        version: "0.10.14"
++        description: "SDL (Simple DirectMedia Layer) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdp"
++        version: "0.10.14"
++        description: "configure streaming sessions using SDP"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sdpdemux; decoder-application/sdp; ']
++      -
++        name: "selector"
++        version: "0.10.14"
++        description: "input/output stream selector elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "shapewipe"
++        version: "0.10.14"
++        description: "Shape Wipe transition filter"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "gstsiren"
++        version: "0.10.14"
++        description: "Siren encoder/decoder/payloader/depayloader plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sirendec; decoder-audio/x-siren, dct-length=(int)320; ']
++      -
++        name: "sndfile"
++        version: "0.10.14"
++        description: "use libsndfile to read and write audio from and to files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "speed"
++        version: "0.10.14"
++        description: "Set speed/pitch on audio/raw streams (resampler)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "stereo"
++        version: "0.10.14"
++        description: "Muck with the stereo signal, enhance it's 'stereo-ness'"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "subenc"
++        version: "0.10.14"
++        description: "subtitle encoders"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "musicbrainz"
++        version: "0.10.14"
++        description: "A TRM signature producer based on libmusicbrainz"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "tta"
++        version: "0.10.14"
++        description: "TTA lossless audio format handling"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-ttaparse; decoder-audio/x-ttafile; ', 'element-ttadec; decoder-audio/x-tta, width=(int){ 8, 16, 24 }, channels=(int){ 1, 2 }, rate=(int)[ 8000, 96000 ]; ']
++      -
++        name: "vcdsrc"
++        version: "0.10.14"
++        description: "Asynchronous read from VCD disk"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vcdsrc; urisource-vcd; ']
++      -
++        name: "videosignal"
++        version: "0.10.14"
++        description: "Various video signal analysers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "vmnc"
++        version: "0.10.14"
++        description: "VMnc video plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vmncdec; decoder-video/x-vmnc, version=(int)1, framerate=(fraction)[ 0/1, 2147483647/1 ], width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ]; ']
++      -
++        name: "xdgmime"
++        version: "0.10.14"
++        description: "XDG-MIME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-twolame
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "twolame"
++        version: "0.10.12"
++        description: "Encode MP2s with TwoLAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-x264
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "x264"
++        version: "0.10.12"
++        description: "libx264-based H264 plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg2enc
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2enc"
++        version: "0.10.14"
++        description: "High-quality MPEG-1/2 video encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mplex"
++        version: "0.10.14"
++        description: "High-quality MPEG/DVD/SVCD/VCD video/audio multiplexer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-bad-examples
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-vdpau
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "vdpau"
++        version: "0.10.14"
++        description: "Various elements utilizing VDPAU"
++        origin: "http://gstreamer.net/"
++        caps: []
++
++  -
++    name: gstreamer0.10-neon
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "neon"
++        version: "0.10.14"
++        description: "lib neon http client src"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-neonhttpsrc; urisource-http; ', 'element-neonhttpsrc; urisource-https; ']
++
++  -
++    name: gstreamer0.10-a52dec
++    version: 0.10.12
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "a52dec"
++        version: "0.10.12"
++        description: "Decodes ATSC A/52 encoded audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-a52dec; decoder-audio/x-ac3; decoder-audio/ac3; decoder-audio/x-private1-ac3; ']
++
+diff --git a/providers/plf_2010.1.tmpl b/providers/plf_2010.1.tmpl
+new file mode 100644
+index 0000000..1e88b5c
+--- /dev/null
++++ b/providers/plf_2010.1.tmpl
+@@ -0,0 +1,6 @@
++# this file contains products data that should be included in the plugin list,
++# but are not available inside the plugin
++id: plf 
++flavor-distro: mandrivalinux
++flavor-distro-version: 2010.1
++
+diff --git a/providers/plf_2010.1.yaml b/providers/plf_2010.1.yaml
+new file mode 100644
+index 0000000..8d57032
+--- /dev/null
++++ b/providers/plf_2010.1.yaml
+@@ -0,0 +1,956 @@
++# WARNING: this file is generated. Do *NOT* edit!
++products:
++  -
++    name: gstreamer0.10-metadata
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "metadata"
++        version: "0.10.18"
++        description: "Metadata (EXIF, IPTC and XMP) image (JPEG, TIFF) demuxer and muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-nas
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "nas"
++        version: "0.10.18"
++        description: "NAS (Network Audio System) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-sid
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "siddec"
++        version: "0.10.14"
++        description: "Uses libsidplay to decode .sid files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-siddec; decoder-audio/x-sid; ']
++
++  -
++    name: gstreamer0.10-directfb
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dfbvideosink"
++        version: "0.10.18"
++        description: "DirectFB video output plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xvid
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xvid"
++        version: "0.10.18"
++        description: "XviD plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-xviddec; decoder-video/x-xvid, width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ']
++
++  -
++    name: gstreamer0.10-lame
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "lame"
++        version: "0.10.14"
++        description: "Encode MP3s with LAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xing
++    version: 0.10.2
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xingenc"
++        version: "0.10.2"
++        description: "Xing MP3 Encoder"
++        origin: "http://banshee-project.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2dec"
++        version: "0.10.14"
++        description: "LibMpeg2 decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpeg2dec; decoder-video/mpeg, mpegversion=(int)[ 1, 2 ], systemstream=(boolean)false; ']
++
++  -
++    name: gstreamer0.10-resindvd
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "resindvd"
++        version: "0.10.18"
++        description: "Resin DVD playback elements"
++        origin: "http://gstreamer.net/"
++        caps: []
++
++  -
++    name: gstreamer0.10-wildmidi
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "wildmidi"
++        version: ""
++        description: ""
++        origin: ""
++        caps: ""
++
++  -
++    name: gstreamer0.10-plugins-bad-doc
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-gme
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gmedec"
++        version: "0.10.18"
++        description: "GME Audio Decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gmedec; decoder-audio/x-ay; decoder-audio/x-gbs; decoder-audio/x-gym; decoder-audio/x-hes; decoder-audio/x-kss; decoder-audio/x-nsf; decoder-audio/x-sap; decoder-audio/x-spc; decoder-audio/x-vgm; ']
++
++  -
++    name: gstreamer0.10-celt
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "celt"
++        version: "0.10.18"
++        description: "CELT plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-celtdec; decoder-audio/x-celt; ']
++
++  -
++    name: gstreamer0.10-pitfdll
++    version: 0.9.1.1
++    architectures: ['i586']
++    plugins:
++      -
++        name: "pitfdll"
++        version: "0.9.1.1"
++        description: "DLL-loader elements"
++        origin: "http://ronald.bitfreak.net/pitfdll/"
++        caps: []
++
++  -
++    name: gstreamer0.10-jack
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jack"
++        version: "0.10.18"
++        description: "Jack elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-dc1394
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dc1394"
++        version: "0.10.18"
++        description: "1394 IIDC Video Source"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-bad
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mxf"
++        version: "0.10.18"
++        description: "MXF plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mxfdemux; decoder-application/mxf; ']
++      -
++        name: "mve"
++        version: "0.10.18"
++        description: "Interplay MVE movie format manipulation"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mvedemux; decoder-video/x-mve; ']
++      -
++        name: "fbdevsink"
++        version: "0.10.18"
++        description: "linux framebuffer video sink"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "apex"
++        version: "0.10.18"
++        description: "Apple AirPort Express Plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "alsaspdif"
++        version: "0.10.18"
++        description: "Alsa plugin for S/PDIF output"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "rawparse"
++        version: "0.10.18"
++        description: "Parses byte streams into raw frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "hdvparse"
++        version: "0.10.18"
++        description: "HDV private stream parser"
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "musicbrainz"
++        version: "0.10.18"
++        description: "A TRM signature producer based on libmusicbrainz"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdp"
++        version: "0.10.18"
++        description: "configure streaming sessions using SDP"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sdpdemux; decoder-application/sdp; ']
++      -
++        name: "id3tag"
++        version: "0.10.18"
++        description: "ID3 v1 and v2 muxing plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "rfbsrc"
++        version: "0.10.18"
++        description: "Connects to a VNC server and decodes RFB stream"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "h264parse"
++        version: "0.10.18"
++        description: "Element parsing raw h264 streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "asfmux"
++        version: "0.10.18"
++        description: "ASF Muxer Plugin"
++        origin: "embedded.ufcg.edu.br"
++        caps: []
++      -
++        name: "mpegtsmux"
++        version: "0.10.18"
++        description: "MPEG-TS muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "real"
++        version: "0.10.18"
++        description: "Decode REAL streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-realaudiodec; decoder-audio/x-pn-realaudio, raversion=(int){ 3, 4, 5, 6, 8 }; decoder-audio/x-sipro; ', 'element-realvideodec; decoder-video/x-pn-realvideo, rmversion=(int)[ 2, 4 ]; ']
++      -
++        name: "qtmux"
++        version: "0.10.18"
++        description: "Quicktime Muxer plugin"
++        origin: "embedded.ufcg.edu.br"
++        caps: []
++      -
++        name: "videomeasure"
++        version: "0.10.18"
++        description: "Various video measurers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mimic"
++        version: "0.10.18"
++        description: "Mimic codec"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mimdec; decoder-video/x-mimic; ']
++      -
++        name: "vmnc"
++        version: "0.10.18"
++        description: "VMnc video plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vmncdec; decoder-video/x-vmnc, version=(int)1, framerate=(fraction)[ 0/1, 2147483647/1 ], width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ]; ']
++      -
++        name: "pnm"
++        version: "0.10.18"
++        description: "PNM plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-pnmdec; decoder-image/x-portable-bitmap; decoder-image/x-portable-graymap; decoder-image/x-portable-pixmap; decoder-image/x-portable-anymap; ']
++      -
++        name: "gstsiren"
++        version: "0.10.18"
++        description: "Siren encoder/decoder/payloader/depayloader plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sirendec; decoder-audio/x-siren, dct-length=(int)320; ']
++      -
++        name: "mpeg4videoparse"
++        version: "0.10.18"
++        description: "MPEG-4 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "selector"
++        version: "0.10.18"
++        description: "input/output stream selector elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "subenc"
++        version: "0.10.18"
++        description: "subtitle encoders"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dccp"
++        version: "0.10.18"
++        description: "transfer data over the network via DCCP."
++        origin: "http://garage.maemo.org/projects/ephone"
++        caps: []
++      -
++        name: "dataurisrc"
++        version: "0.10.18"
++        description: "data: URI source"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dataurisrc; urisource-data; ']
++      -
++        name: "bz2"
++        version: "0.10.18"
++        description: "Compress or decompress streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-bz2dec; decoder-application/x-bzip; ']
++      -
++        name: "audioparsersbad"
++        version: "0.10.18"
++        description: "audioparsers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dvb"
++        version: "0.10.18"
++        description: "DVB elements"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvbbasebin; urisource-dvb; ']
++      -
++        name: "festival"
++        version: "0.10.18"
++        description: "Synthesizes plain text into audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "bayer"
++        version: "0.10.18"
++        description: "Elements to convert Bayer images"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sndfile"
++        version: "0.10.18"
++        description: "use libsndfile to read and write audio from and to files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "tta"
++        version: "0.10.18"
++        description: "TTA lossless audio format handling"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-ttadec; decoder-audio/x-tta, width=(int){ 8, 16, 24 }, channels=(int){ 1, 2 }, rate=(int)[ 8000, 96000 ]; ', 'element-ttaparse; decoder-audio/x-ttafile; ']
++      -
++        name: "legacyresample"
++        version: "0.10.18"
++        description: "Resamples audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "videosignal"
++        version: "0.10.18"
++        description: "Various video signal analysers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "aiff"
++        version: "0.10.18"
++        description: "Create and parse Audio Interchange File Format (AIFF) files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-aiffparse; decoder-audio/x-aiff; ']
++      -
++        name: "cdaudio"
++        version: "0.10.18"
++        description: "Play CD audio through the CD Drive"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdl"
++        version: "0.10.18"
++        description: "SDL (Simple DirectMedia Layer) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegdemux2"
++        version: "0.10.18"
++        description: "MPEG demuxers"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegtsdemux; decoder-video/mpegts; ', 'element-mpegpsdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; decoder-video/x-cdxa; ']
++      -
++        name: "pcapparse"
++        version: "0.10.18"
++        description: "Element parsing raw pcap streams"
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "dvdspu"
++        version: "0.10.18"
++        description: "DVD Sub-picture Overlay element"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "stereo"
++        version: "0.10.18"
++        description: "Muck with the stereo signal, enhance it's 'stereo-ness'"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "debugutilsbad"
++        version: "0.10.18"
++        description: "Collection of elements that may or may not be useful for debugging"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "jpegformat"
++        version: "0.10.18"
++        description: "JPEG interchange format plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "cdxaparse"
++        version: "0.10.18"
++        description: "Parse a .dat file (VCD) into raw mpeg1"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "scaletempo"
++        version: "0.10.18"
++        description: "Scale audio tempo in sync with playback rate"
++        origin: "http://gstreamer.freedesktop.org/"
++        caps: []
++      -
++        name: "autoconvert"
++        version: "0.10.18"
++        description: "Selects convertor element based on caps"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "adpcmenc"
++        version: "0.10.18"
++        description: "ADPCM encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "nuvdemux"
++        version: "0.10.18"
++        description: "Demuxes and muxes audio and video"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nuvdemux; decoder-video/x-nuv; ']
++      -
++        name: "modplug"
++        version: "0.10.18"
++        description: ".MOD audio decoding"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-modplug; decoder-audio/x-mod; decoder-audio/x-xm; decoder-audio/x-it; decoder-audio/x-s3m; decoder-audio/x-stm; ']
++      -
++        name: "freeze"
++        version: "0.10.18"
++        description: "Stream freezer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "oss4"
++        version: "0.10.18"
++        description: "Open Sound System (OSS) version 4 support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "adpcmdec"
++        version: "0.10.18"
++        description: "ADPCM decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-adpcmdec; decoder-audio/x-adpcm, layout=(string){ microsoft, dvi }, block_align=(int)[ 64, 8192 ], rate=(int)[ 1, 2147483647 ], channels=(int)[ 1, 2 ]; ']
++      -
++        name: "nsfdec"
++        version: "0.10.18"
++        description: "Uses nosefart to decode .nsf files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nsfdec; decoder-audio/x-nsf; ']
++      -
++        name: "speed"
++        version: "0.10.18"
++        description: "Set speed/pitch on audio/raw streams (resampler)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "vcdsrc"
++        version: "0.10.18"
++        description: "Asynchronous read from VCD disk"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vcdsrc; urisource-vcd; ']
++      -
++        name: "camerabin"
++        version: "0.10.18"
++        description: "High level api for DC (Digital Camera) application"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegvideoparse"
++        version: "0.10.18"
++        description: "MPEG-1 and MPEG-2 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegpsmux"
++        version: "0.10.18"
++        description: "MPEG-PS muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "frei0r"
++        version: "0.10.18"
++        description: "frei0r plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-voip
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "rtpmux"
++        version: "0.10.18"
++        description: "RTP Muxer plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dtmf"
++        version: "0.10.18"
++        description: "DTMF plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "valve"
++        version: "0.10.18"
++        description: "Valve"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "liveadder"
++        version: "0.10.18"
++        description: "Adds multiple live discontinuous streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrwb
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrwbenc"
++        version: "0.10.18"
++        description: "Adaptive Multi-Rate Wide-Band Encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-rsvg
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "rsvg"
++        version: "0.10.18"
++        description: "RSVG plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-rsvgdec; decoder-image/svg+xml; decoder-image/svg; ']
++
++  -
++    name: gstreamer0.10-cdio
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "cdio"
++        version: "0.10.14"
++        description: "Read audio from audio CDs"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-cdiocddasrc; urisource-cdda; ']
++
++  -
++    name: gstreamer0.10-soundtouch
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "soundtouch"
++        version: "0.10.18"
++        description: "Audio Pitch Controller & BPM Detection"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-musepack
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "musepack"
++        version: "0.10.18"
++        description: "Musepack decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-musepackdec; decoder-audio/x-musepack, streamversion=(int)7; ']
++
++  -
++    name: gstreamer0.10-mms
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mms"
++        version: "0.10.18"
++        description: "Microsoft Multi Media Server streaming protocol support"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mmssrc; urisource-mms; ', 'element-mmssrc; urisource-mmsh; ', 'element-mmssrc; urisource-mmst; ', 'element-mmssrc; urisource-mmsu; ']
++
++  -
++    name: gstreamer0.10-amrwbdec
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrwbdec"
++        version: "0.10.14"
++        description: "Adaptive Multi-Rate Wide-Band Decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrwbdec; decoder-audio/AMR-WB, rate=(int)16000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-cog
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "cog"
++        version: "0.10.18"
++        description: "Cog plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-ladspa
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ladspa"
++        version: "0.10.18"
++        description: "All LADSPA plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-dts
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dtsdec"
++        version: "0.10.18"
++        description: "Decodes DTS audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dtsdec; decoder-audio/x-dts; decoder-audio/x-private1-dts; ']
++
++  -
++    name: gstreamer0.10-schroedinger
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "schro"
++        version: "0.10.18"
++        description: "Schroedinger plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-schrodec; decoder-video/x-dirac; ']
++
++  -
++    name: gstreamer0.10-gsm
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gsm"
++        version: "0.10.18"
++        description: "GSM encoder/decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gsmdec; decoder-audio/x-gsm, rate=(int)8000, channels=(int)1; decoder-audio/ms-gsm, rate=(int)[ 1, 2147483647 ], channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-jp2k
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jp2k"
++        version: "1.900.1"
++        description: "Jasper-based JPEG2000 image decoder/encoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-jp2kdec; decoder-image/x-j2c, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/x-jpc, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/jp2; ']
++
++  -
++    name: gstreamer0.10-dirac
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dirac"
++        version: "0.10.18"
++        description: "Dirac plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-vdpau
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "vdpau"
++        version: "0.10.18"
++        description: "Various elements utilizing VDPAU"
++        origin: "http://gstreamer.net/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-ugly
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mad"
++        version: "0.10.14"
++        description: "mp3 decoding based on the mad library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mad; decoder-audio/mpeg, mpegversion=(int)1, layer=(int)[ 1, 3 ], rate=(int){ 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000 }, channels=(int)[ 1, 2 ]; ']
++      -
++        name: "dvdsub"
++        version: "0.10.14"
++        description: "DVD subtitle parser and decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdsubdec; decoder-video/x-dvd-subpicture; ']
++      -
++        name: "dvdlpcmdec"
++        version: "0.10.14"
++        description: "Decode DVD LPCM frames into standard PCM"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdlpcmdec; decoder-audio/x-private1-lpcm; decoder-audio/x-lpcm, width=(int){ 16, 20, 24 }, rate=(int){ 32000, 44100, 48000, 96000 }, channels=(int)[ 1, 8 ], dynamic_range=(int)[ 0, 255 ], emphasis=(boolean){ true, false }, mute=(boolean){ true, false }; ']
++      -
++        name: "mpegaudioparse"
++        version: "0.10.14"
++        description: "MPEG-1 layer 1/2/3 audio stream elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegstream"
++        version: "0.10.14"
++        description: "MPEG system stream parser"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; ', 'element-dvddemux; decoder-video/mpeg, mpegversion=(int)2, systemstream=(boolean)true; ']
++      -
++        name: "asf"
++        version: "0.10.14"
++        description: "Demuxes and muxes audio and video in Microsofts ASF format"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-asfdemux; decoder-video/x-ms-asf; ']
++      -
++        name: "dvdread"
++        version: "0.10.14"
++        description: "Access a DVD with dvdread"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdreadsrc; urisource-dvd; ']
++      -
++        name: "realmedia"
++        version: "0.10.14"
++        description: "RealMedia support plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-rmdemux; decoder-application/vnd.rn-realmedia; ', 'element-rademux; decoder-application/x-pn-realaudio; ', 'element-pnmsrc; urisource-pnm; ']
++      -
++        name: "iec958"
++        version: "0.10.14"
++        description: "Convert raw AC3 into IEC958 (S/PDIF) frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-faac
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faac"
++        version: "0.10.18"
++        description: "Free AAC Encoder (FAAC)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrnb
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrnb"
++        version: "0.10.14"
++        description: "Adaptive Multi-Rate Narrow-Band"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrnbdec; decoder-audio/AMR, rate=(int)8000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-faad
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faad"
++        version: "0.10.18"
++        description: "Free AAC Decoder (FAAD)"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-faad; decoder-audio/mpeg, mpegversion=(int){ 2, 4 }; ']
++
++  -
++    name: gstreamer0.10-ofa
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ofa"
++        version: "0.10.18"
++        description: "Calculate MusicIP fingerprint from audio files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-kate
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "kate"
++        version: "0.10.18"
++        description: "Kate plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-katedec; decoder-subtitle/x-kate; ']
++
++  -
++    name: gstreamer0.10-twolame
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "twolame"
++        version: "0.10.14"
++        description: "Encode MP2s with TwoLAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-x264
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "x264"
++        version: "0.10.14"
++        description: "libx264-based H264 plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg2enc
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mplex"
++        version: "0.10.18"
++        description: "High-quality MPEG/DVD/SVCD/VCD video/audio multiplexer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpeg2enc"
++        version: "0.10.18"
++        description: "High-quality MPEG-1/2 video encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-bad-examples
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-neon
++    version: 0.10.18
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "neon"
++        version: "0.10.18"
++        description: "lib neon http client src"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-neonhttpsrc; urisource-http; ', 'element-neonhttpsrc; urisource-https; ']
++
++  -
++    name: gstreamer0.10-a52dec
++    version: 0.10.14
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "a52dec"
++        version: "0.10.14"
++        description: "Decodes ATSC A/52 encoded audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-a52dec; decoder-audio/x-ac3; decoder-audio/ac3; decoder-audio/x-private1-ac3; ']
++
+diff --git a/providers/plf_2011.0.tmpl b/providers/plf_2011.0.tmpl
+new file mode 100644
+index 0000000..d289f18
+--- /dev/null
++++ b/providers/plf_2011.0.tmpl
+@@ -0,0 +1,6 @@
++# this file contains products data that should be included in the plugin list,
++# but are not available inside the plugin
++id: plf 
++flavor-distro: mandrivalinux
++flavor-distro-version: 2011.0
++
+diff --git a/providers/plf_2011.0.yaml b/providers/plf_2011.0.yaml
+new file mode 100644
+index 0000000..ec1fefb
+--- /dev/null
++++ b/providers/plf_2011.0.yaml
+@@ -0,0 +1,1040 @@
++# WARNING: this file is generated. Do *NOT* edit!
++products:
++  -
++    name: gstreamer0.10-metadata
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "metadata"
++        version: "0.10.20"
++        description: "Metadata (EXIF, IPTC and XMP) image (JPEG, TIFF) demuxer and muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-nas
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "nas"
++        version: "0.10.20"
++        description: "NAS (Network Audio System) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-sid
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "siddec"
++        version: "0.10.16"
++        description: "Uses libsidplay to decode .sid files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-siddec; decoder-audio/x-sid; ']
++
++  -
++    name: gstreamer0.10-directfb
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dfbvideosink"
++        version: "0.10.20"
++        description: "DirectFB video output plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xvid
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xvid"
++        version: "0.10.20"
++        description: "XviD plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-xviddec; decoder-video/x-xvid, width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ]; ']
++
++  -
++    name: gstreamer0.10-lame
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "lame"
++        version: "0.10.16"
++        description: "Encode MP3s with LAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-xing
++    version: 0.10.2
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "xingenc"
++        version: "0.10.2"
++        description: "Xing MP3 Encoder"
++        origin: "http://banshee-project.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mpeg2dec"
++        version: "0.10.16"
++        description: "LibMpeg2 decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpeg2dec; decoder-video/mpeg, mpegversion=(int)[ 1, 2 ], systemstream=(boolean)false; ']
++
++  -
++    name: gstreamer0.10-faac
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faac"
++        version: "0.10.20"
++        description: "Free AAC Encoder (FAAC)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-wildmidi
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "wildmidi"
++        version: "0.10.20"
++        description: "Wildmidi Plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-wildmidi; decoder-audio/midi; decoder-audio/riff-midi; ']
++
++  -
++    name: gstreamer0.10-plugins-bad-doc
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-gme
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gmedec"
++        version: "0.10.20"
++        description: "GME Audio Decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gmedec; decoder-audio/x-ay; decoder-audio/x-gbs; decoder-audio/x-gym; decoder-audio/x-hes; decoder-audio/x-kss; decoder-audio/x-nsf; decoder-audio/x-sap; decoder-audio/x-spc; decoder-audio/x-vgm; ']
++
++  -
++    name: gstreamer0.10-rsvg
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "rsvg"
++        version: "0.10.20"
++        description: "RSVG plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-rsvgdec; decoder-image/svg+xml; decoder-image/svg; ']
++
++  -
++    name: gstreamer0.10-pitfdll
++    version: 0.9.1.1
++    architectures: ['i586']
++    plugins:
++      -
++        name: "pitfdll"
++        version: "0.9.1.1"
++        description: "DLL-loader elements"
++        origin: "http://ronald.bitfreak.net/pitfdll/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrnb
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrnb"
++        version: "0.10.16"
++        description: "Adaptive Multi-Rate Narrow-Band"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrnbdec; decoder-audio/AMR, rate=(int)8000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-dc1394
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dc1394"
++        version: "0.10.20"
++        description: "1394 IIDC Video Source"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-voip
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "rtpmux"
++        version: "0.10.20"
++        description: "RTP Muxer plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dtmf"
++        version: "0.10.20"
++        description: "DTMF plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "valve"
++        version: "0.10.20"
++        description: "Valve"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "liveadder"
++        version: "0.10.20"
++        description: "Adds multiple live discontinuous streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-amrwb
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrwbenc"
++        version: "0.10.20"
++        description: "Adaptive Multi-Rate Wide-Band Encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-celt
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "celt"
++        version: "0.10.20"
++        description: "CELT plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-celtdec; decoder-audio/x-celt; ']
++
++  -
++    name: gstreamer0.10-cdio
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "cdio"
++        version: "0.10.16"
++        description: "Read audio from audio CDs"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-cdiocddasrc; urisource-cdda; ']
++
++  -
++    name: gstreamer0.10-soundtouch
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "soundtouch"
++        version: "0.10.20"
++        description: "Audio Pitch Controller & BPM Detection"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-musepack
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "musepack"
++        version: "0.10.20"
++        description: "Musepack decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-musepackdec; decoder-audio/x-musepack, streamversion=(int)7; ']
++
++  -
++    name: gstreamer0.10-mms
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mms"
++        version: "0.10.20"
++        description: "Microsoft Multi Media Server streaming protocol support"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mmssrc; urisource-mmsu; ', 'element-mmssrc; urisource-mmst; ', 'element-mmssrc; urisource-mmsh; ', 'element-mmssrc; urisource-mms; ']
++
++  -
++    name: gstreamer0.10-amrwbdec
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "amrwbdec"
++        version: "0.10.16"
++        description: "Adaptive Multi-Rate Wide-Band Decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-amrwbdec; decoder-audio/AMR-WB, rate=(int)16000, channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-cog
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "cog"
++        version: "0.10.20"
++        description: "Cog plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-ladspa
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ladspa"
++        version: "0.10.20"
++        description: "All LADSPA plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-dts
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dtsdec"
++        version: "0.10.20"
++        description: "Decodes DTS audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dtsdec; decoder-audio/x-dts; decoder-audio/x-private1-dts; ']
++
++  -
++    name: gstreamer0.10-schroedinger
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "schro"
++        version: "0.10.20"
++        description: "Schroedinger plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-schrodec; decoder-video/x-dirac; ']
++
++  -
++    name: gstreamer0.10-libass
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "assrender"
++        version: "0.10.20"
++        description: "ASS/SSA subtitle renderer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-gsm
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "gsm"
++        version: "0.10.20"
++        description: "GSM encoder/decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-gsmdec; decoder-audio/x-gsm, rate=(int)8000, channels=(int)1; decoder-audio/ms-gsm, rate=(int)[ 1, 2147483647 ], channels=(int)1; ']
++
++  -
++    name: gstreamer0.10-jp2k
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jp2k"
++        version: "1.900.1"
++        description: "Jasper-based JPEG2000 image decoder/encoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-jp2kdec; decoder-image/x-j2c, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/x-jpc, framerate=(fraction)[ 0/1, 2147483647/1 ], fields=(int)1; decoder-image/jp2; ']
++
++  -
++    name: gstreamer0.10-dirac
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "dirac"
++        version: "0.10.20"
++        description: "Dirac plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-jack
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "jack"
++        version: "0.10.20"
++        description: "Jack elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-ugly
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mad"
++        version: "0.10.16"
++        description: "mp3 decoding based on the mad library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mad; decoder-audio/mpeg, mpegversion=(int)1, layer=(int)[ 1, 3 ], rate=(int){ 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000 }, channels=(int)[ 1, 2 ]; ']
++      -
++        name: "dvdsub"
++        version: "0.10.16"
++        description: "DVD subtitle parser and decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdsubdec; decoder-video/x-dvd-subpicture; ']
++      -
++        name: "dvdlpcmdec"
++        version: "0.10.16"
++        description: "Decode DVD LPCM frames into standard PCM"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdlpcmdec; decoder-audio/x-private1-lpcm; decoder-audio/x-lpcm, width=(int){ 16, 20, 24 }, rate=(int){ 32000, 44100, 48000, 96000 }, channels=(int)[ 1, 8 ], dynamic_range=(int)[ 0, 255 ], emphasis=(boolean){ true, false }, mute=(boolean){ true, false }; ']
++      -
++        name: "mpegaudioparse"
++        version: "0.10.16"
++        description: "MPEG-1 layer 1/2/3 audio stream elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegstream"
++        version: "0.10.16"
++        description: "MPEG system stream parser"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvddemux; decoder-video/mpeg, mpegversion=(int)2, systemstream=(boolean)true; ', 'element-mpegdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; ']
++      -
++        name: "asf"
++        version: "0.10.16"
++        description: "Demuxes and muxes audio and video in Microsofts ASF format"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-asfdemux; decoder-video/x-ms-asf; ']
++      -
++        name: "dvdread"
++        version: "0.10.16"
++        description: "Access a DVD with dvdread"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvdreadsrc; urisource-dvd; ']
++      -
++        name: "realmedia"
++        version: "0.10.16"
++        description: "RealMedia support plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-pnmsrc; urisource-pnm; ', 'element-rademux; decoder-application/x-pn-realaudio; ', 'element-rmdemux; decoder-application/vnd.rn-realmedia; ']
++      -
++        name: "iec958"
++        version: "0.10.16"
++        description: "Convert raw AC3 into IEC958 (S/PDIF) frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-resindvd
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "resindvd"
++        version: "0.10.20"
++        description: "Resin DVD playback elements"
++        origin: "http://gstreamer.net/"
++        caps: []
++
++  -
++    name: gstreamer0.10-faad
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "faad"
++        version: "0.10.20"
++        description: "Free AAC Decoder (FAAD)"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-faad; decoder-audio/mpeg, mpegversion=(int){ 2, 4 }; ']
++
++  -
++    name: gstreamer0.10-rtmp
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "rtmpsrc"
++        version: "0.10.20"
++        description: "RTMP source"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-rtmpsrc; urisource-rtmpts; ', 'element-rtmpsrc; urisource-rtmpte; ', 'element-rtmpsrc; urisource-rtmfp; ', 'element-rtmpsrc; urisource-rtmpe; ', 'element-rtmpsrc; urisource-rtmps; ', 'element-rtmpsrc; urisource-rtmpt; ', 'element-rtmpsrc; urisource-rtmp; ']
++
++  -
++    name: gstreamer0.10-plugins-bad
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mxf"
++        version: "0.10.20"
++        description: "MXF plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mxfdemux; decoder-application/mxf; ']
++      -
++        name: "ivfparse"
++        version: "0.10.20"
++        description: "IVF parser"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-ivfparse; decoder-video/x-ivf; ']
++      -
++        name: "invtelecine"
++        version: "0.10.20"
++        description: "Inverse Telecine"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "gsettings"
++        version: "0.10.20"
++        description: "GSettings plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mve"
++        version: "0.10.20"
++        description: "Interplay MVE movie format manipulation"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mvedemux; decoder-video/x-mve; ']
++      -
++        name: "fbdevsink"
++        version: "0.10.20"
++        description: "linux framebuffer video sink"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "apexsink"
++        version: "0.10.20"
++        description: "Apple AirPort Express Plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "alsaspdif"
++        version: "0.10.20"
++        description: "Alsa plugin for S/PDIF output"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "rawparse"
++        version: "0.10.20"
++        description: "Parses byte streams into raw frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "hdvparse"
++        version: "0.10.20"
++        description: "HDV private stream parser"
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "musicbrainz"
++        version: "0.10.20"
++        description: "A TRM signature producer based on libmusicbrainz"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdp"
++        version: "0.10.20"
++        description: "configure streaming sessions using SDP"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sdpdemux; decoder-application/sdp; ']
++      -
++        name: "id3tag"
++        version: "0.10.20"
++        description: "ID3 v1 and v2 muxing plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "rfbsrc"
++        version: "0.10.20"
++        description: "Connects to a VNC server and decodes RFB stream"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "h264parse"
++        version: "0.10.20"
++        description: "Element parsing raw h264 streams"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "asfmux"
++        version: "0.10.20"
++        description: "ASF Muxer Plugin"
++        origin: "embedded.ufcg.edu.br"
++        caps: []
++      -
++        name: "mpegtsmux"
++        version: "0.10.20"
++        description: "MPEG-TS muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "real"
++        version: "0.10.20"
++        description: "Decode REAL streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-realaudiodec; decoder-audio/x-pn-realaudio, raversion=(int){ 3, 4, 5, 6, 8 }; decoder-audio/x-sipro; ', 'element-realvideodec; decoder-video/x-pn-realvideo, rmversion=(int)[ 2, 4 ]; ']
++      -
++        name: "qtmux"
++        version: "0.10.20"
++        description: "Quicktime Muxer plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "videomeasure"
++        version: "0.10.20"
++        description: "Various video measurers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "shm"
++        version: "0.10.20"
++        description: "shared memory sink source"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mimic"
++        version: "0.10.20"
++        description: "Mimic codec"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mimdec; decoder-video/x-mimic; ']
++      -
++        name: "vmnc"
++        version: "0.10.20"
++        description: "VmWare Video Codec plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vmncdec; decoder-video/x-vmnc, version=(int)1, framerate=(fraction)[ 0/1, 2147483647/1 ], width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ]; ']
++      -
++        name: "pnm"
++        version: "0.10.20"
++        description: "PNM plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-pnmdec; decoder-image/x-portable-bitmap; decoder-image/x-portable-graymap; decoder-image/x-portable-pixmap; decoder-image/x-portable-anymap; ']
++      -
++        name: "gstsiren"
++        version: "0.10.20"
++        description: "Siren encoder/decoder/payloader/depayloader plugins"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-sirendec; decoder-audio/x-siren, dct-length=(int)320; ']
++      -
++        name: "coloreffects"
++        version: "0.10.20"
++        description: "Color Look-up Table filters"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpeg4videoparse"
++        version: "0.10.20"
++        description: "MPEG-4 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "selector"
++        version: "0.10.20"
++        description: "input/output stream selector elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "subenc"
++        version: "0.10.20"
++        description: "subtitle encoders"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dccp"
++        version: "0.10.20"
++        description: "transfer data over the network via DCCP."
++        origin: "http://garage.maemo.org/projects/ephone"
++        caps: []
++      -
++        name: "dataurisrc"
++        version: "0.10.20"
++        description: "data: URI source"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dataurisrc; urisource-data; ']
++      -
++        name: "bz2"
++        version: "0.10.20"
++        description: "Compress or decompress streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-bz2dec; decoder-application/x-bzip; ']
++      -
++        name: "audioparsersbad"
++        version: "0.10.20"
++        description: "audioparsers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "dvb"
++        version: "0.10.20"
++        description: "DVB elements"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-dvbbasebin; urisource-dvb; ']
++      -
++        name: "festival"
++        version: "0.10.20"
++        description: "Synthesizes plain text into audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "bayer"
++        version: "0.10.20"
++        description: "Elements to convert Bayer images"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sndfile"
++        version: "0.10.20"
++        description: "use libsndfile to read and write audio from and to files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "tta"
++        version: "0.10.20"
++        description: "TTA lossless audio format handling"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-ttadec; decoder-audio/x-tta, width=(int){ 8, 16, 24 }, channels=(int){ 1, 2 }, rate=(int)[ 8000, 96000 ]; ', 'element-ttaparse; decoder-audio/x-ttafile; ']
++      -
++        name: "legacyresample"
++        version: "0.10.20"
++        description: "Resamples audio"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "videosignal"
++        version: "0.10.20"
++        description: "Various video signal analysers"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "aiff"
++        version: "0.10.20"
++        description: "Create and parse Audio Interchange File Format (AIFF) files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-aiffparse; decoder-audio/x-aiff; ']
++      -
++        name: "cdaudio"
++        version: "0.10.20"
++        description: "Play CD audio through the CD Drive"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "sdl"
++        version: "0.10.20"
++        description: "SDL (Simple DirectMedia Layer) support for GStreamer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegdemux2"
++        version: "0.10.20"
++        description: "MPEG demuxers"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-mpegtsdemux; decoder-video/mpegts; ', 'element-mpegpsdemux; decoder-video/mpeg, mpegversion=(int){ 1, 2 }, systemstream=(boolean)true; decoder-video/x-cdxa; ']
++      -
++        name: "gaudieffects"
++        version: "0.10.20"
++        description: "Gaudi video effects."
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "pcapparse"
++        version: "0.10.20"
++        description: "Element parsing raw pcap streams"
++        origin: "http://gstreamer.net/"
++        caps: []
++      -
++        name: "dvdspu"
++        version: "0.10.20"
++        description: "DVD Sub-picture Overlay element"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "stereo"
++        version: "0.10.20"
++        description: "Muck with the stereo signal, enhance it's 'stereo-ness'"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "debugutilsbad"
++        version: "0.10.20"
++        description: "Collection of elements that may or may not be useful for debugging"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "jpegformat"
++        version: "0.10.20"
++        description: "JPEG interchange format plugin"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "cdxaparse"
++        version: "0.10.20"
++        description: "Parse a .dat file (VCD) into raw mpeg1"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "scaletempo"
++        version: "0.10.20"
++        description: "Scale audio tempo in sync with playback rate"
++        origin: "http://gstreamer.freedesktop.org/"
++        caps: []
++      -
++        name: "autoconvert"
++        version: "0.10.20"
++        description: "Selects convertor element based on caps"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "adpcmenc"
++        version: "0.10.20"
++        description: "ADPCM encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "nuvdemux"
++        version: "0.10.20"
++        description: "Demuxes MythTV NuppelVideo files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nuvdemux; decoder-video/x-nuv; ']
++      -
++        name: "modplug"
++        version: "0.10.20"
++        description: ".MOD audio decoding"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-modplug; decoder-audio/x-mod; decoder-audio/x-xm; decoder-audio/x-it; decoder-audio/x-s3m; decoder-audio/x-stm; ']
++      -
++        name: "freeze"
++        version: "0.10.20"
++        description: "Stream freezer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "geometrictransform"
++        version: "0.10.20"
++        description: "Various geometric image transform elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "videomaxrate"
++        version: "0.10.20"
++        description: "Drop extra frames"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "adpcmdec"
++        version: "0.10.20"
++        description: "ADPCM decoder"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-adpcmdec; decoder-audio/x-adpcm, layout=(string){ microsoft, dvi }, block_align=(int)[ 64, 8192 ], rate=(int)[ 1, 2147483647 ], channels=(int)[ 1, 2 ]; ']
++      -
++        name: "nsf"
++        version: "0.10.20"
++        description: "Uses nosefart to decode .nsf files"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-nsfdec; decoder-audio/x-nsf; ']
++      -
++        name: "speed"
++        version: "0.10.20"
++        description: "Set speed/pitch on audio/raw streams (resampler)"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "vcdsrc"
++        version: "0.10.20"
++        description: "Asynchronous read from VCD disk"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vcdsrc; urisource-vcd; ']
++      -
++        name: "camerabin"
++        version: "0.10.20"
++        description: "High level api for DC (Digital Camera) application"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "segmentclip"
++        version: "0.10.20"
++        description: "Segment clip elements"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegvideoparse"
++        version: "0.10.20"
++        description: "MPEG-1 and MPEG-2 video parser"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpegpsmux"
++        version: "0.10.20"
++        description: "MPEG-PS muxer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "frei0r"
++        version: "0.10.20"
++        description: "frei0r plugin library"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-kate
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "kate"
++        version: "0.10.20"
++        description: "Kate plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-katedec; decoder-subtitle/x-kate; ']
++
++  -
++    name: gstreamer0.10-twolame
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "twolame"
++        version: "0.10.16"
++        description: "Encode MP2s with TwoLAME"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-x264
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "x264"
++        version: "0.10.16"
++        description: "libx264-based H264 plugins"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-mpeg2enc
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "mplex"
++        version: "0.10.20"
++        description: "High-quality MPEG/DVD/SVCD/VCD video/audio multiplexer"
++        origin: "http://plf.zarb.org/"
++        caps: []
++      -
++        name: "mpeg2enc"
++        version: "0.10.20"
++        description: "High-quality MPEG-1/2 video encoder"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-plugins-bad-examples
++    version: 0.10.19
++    architectures: ['i586', 'x86_64']
++    plugins:
++
++  -
++    name: gstreamer0.10-ofa
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "ofa"
++        version: "0.10.20"
++        description: "Calculate MusicIP fingerprint from audio files"
++        origin: "http://plf.zarb.org/"
++        caps: []
++
++  -
++    name: gstreamer0.10-vdpau
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "vdpau"
++        version: "0.10.20"
++        description: "Various elements utilizing VDPAU"
++        origin: "http://gstreamer.net/"
++        caps: []
++
++  -
++    name: gstreamer0.10-neon
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "neon"
++        version: "0.10.20"
++        description: "lib neon http client src"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-neonhttpsrc; urisource-https; ', 'element-neonhttpsrc; urisource-http; ']
++
++  -
++    name: gstreamer0.10-a52dec
++    version: 0.10.16
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "a52dec"
++        version: "0.10.16"
++        description: "Decodes ATSC A/52 encoded audio streams"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-a52dec; decoder-audio/x-ac3; decoder-audio/ac3; decoder-audio/x-private1-ac3; ']
++
++  -
++    name: gstreamer0.10-vp8
++    version: 0.10.20
++    architectures: ['i586', 'x86_64']
++    plugins:
++      -
++        name: "vp8"
++        version: "0.10.20"
++        description: "VP8 plugin"
++        origin: "http://plf.zarb.org/"
++        caps: ['element-vp8dec; decoder-video/x-vp8; ']
++

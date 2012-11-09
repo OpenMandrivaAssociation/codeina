@@ -1,0 +1,8 @@
+--- bin/codeina.orig	2010-11-05 05:39:24.000000000 +0000
++++ bin/codeina	2010-11-05 05:39:54.000000000 +0000
+@@ -13,4 +13,4 @@
+   break
+ done
+ 
+-exec $0.bin "$@"
++exec `basename \`readlink -f $0\``.bin "$@"
