@@ -10,7 +10,7 @@
 Name:           codeina
 Version:        0.10.7
 Release:        %mkrel 10
-Summary:        Codeina - Codec Installation Application
+Summary:        - Codec Installation Application
 
 Group:          Sound
 License:        GPLv2+
