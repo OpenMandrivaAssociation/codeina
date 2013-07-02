@@ -9,8 +9,8 @@
 
 Name:           codeina
 Version:        0.10.7
-Release:        %mkrel 10
-Summary:        - Codec Installation Application
+Release:        11
+Summary:        Codec Installation Application
 
 Group:          Sound
 License:        GPLv2+
@@ -29,7 +29,6 @@ Patch9: codeina-0.10.7-mandriva.patch
 # same patch as mandriva patch, for plf packages
 Patch11: codeina-0.10.7-plf.patch
 
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:       python >= 2.5
 Requires:       gstreamer0.10-python >= %{gstpy_minver}
@@ -96,11 +95,10 @@ export LD_LIBRARY_PATH=%xulrunner_mozappdir
 make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 
 %makeinstall_std
 
-rm -f $RPM_BUILD_ROOT%{_datadir}/codeina/logo/ubuntu.png
+rm -f %{buildroot}%{_datadir}/codeina/logo/ubuntu.png
 
 %find_lang %{name} 
 
@@ -124,7 +122,6 @@ if [ "$1" = "0" ]; then
 fi
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
